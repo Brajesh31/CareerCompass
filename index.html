@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Compass</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet">
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+            Confused what's your ideal job role? <br />
+            <span style="color: hsl(218, 81%, 75%)">Unlock Your Potential with Career Compass </span>
+          </h1>
+          <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+            In today's competitive job market, finding the perfect role can feel like searching for a needle in a haystack. 
+            Say goodbye to endless job postings and let Career Compass revolutionize your job search.
+          </p>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+  
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example1" class="form-control" required />
+                      <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div data-mdb-input-init class="form-outline">
+                      <input type="text" id="form3Example2" class="form-control" required/>
+                      <label class="form-label" for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" id="form3Example3" class="form-control"required />
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" onclick="redirectToStreamlit()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                  Sign up 
+              </button>
+                           
+  
+                <!-- Register buttons -->
+                <!-- <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i> -->
+                  </button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS (jQuery is required) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  function redirectToStreamlit() {
+      window.location.href = 'https://careercompassupes.streamlit.app';
+  }
+</script>
+
+</section>
+
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
+></script>
+
+
+<script>
+  // Function to open the popup
+document.getElementById('openPopup').addEventListener('click', function(event) {
+  event.preventDefault();
+  document.getElementById('popup').style.display = 'block';
+});
+
+// Function to close the popup
+document.getElementById('closePopup').addEventListener('click', function() {
+  document.getElementById('popup').style.display = 'none';
+});
+
+  // Function to validate checkbox when form is submitted
+  document.getElementById('signupForm').addEventListener('submit', function(event) {
+    if (!document.getElementById('consentCheckbox').checked) {
+      event.preventDefault();
+      document.getElementById('errorMessagePopup').style.display = 'block';
+    }
+  });
+
+  // Function to close the error popup
+  document.getElementById('closeErrorPopup').addEventListener('click', function() {
+    document.getElementById('errorMessagePopup').style.display = 'none';
+  });
+
+</script>
+</body>
+</html>
+
