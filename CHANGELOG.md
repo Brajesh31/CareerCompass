@@ -33,3 +33,7 @@ tagged releases or versioning policy, so entries are grouped under
 
 These notes describe the repository baseline reviewed for this documentation.
 They do not certify model accuracy, privacy, security, or data rights.
+
+### Additional review findings
+
+- The active page is app.py; session_state.py is a legacy helper that the page does not import.
