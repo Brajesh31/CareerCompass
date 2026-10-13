@@ -108,3 +108,7 @@ No. The app asks the classifier for one category and searches listings using tha
 ## Does Google sign-in personalize recommendations?
 
 The app requests openid, email, and profile scopes, but the current application uses the presence of an OAuth token as a gate before showing the upload page. It does not document a user profile database or a personalized recommendation system.
+
+## Why does the app need internet access at startup?
+
+The script calls NLTK download functions for tokenizer and stop-word data, and it loads remote assets and OAuth configuration. It also calls the job-search provider after a prediction. These network operations can fail independently of the local model.
