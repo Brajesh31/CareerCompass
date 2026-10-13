@@ -77,3 +77,7 @@ Do not post a real résumé, names, email addresses, phone numbers, or other ide
 ### Credentials and private material
 
 Do not publish API keys, OAuth tokens, private messages, confidential logs, or deployment secrets. If any are exposed, remove public copies where possible and report privately so the credential can be revoked.
+
+### Employment-related claims
+
+Do not use project discussions to promote discriminatory selection criteria or claim that a model score proves a person's competence, character, or employability.
