@@ -92,3 +92,5 @@ For a label-map change, compare all 25 integer classes against the encoder class
 For training changes, split first, fit vectorization only on training text, and retain the exact split and seed so reported metrics can be reproduced.
 
 For OAuth changes, mock authorization/token responses in development checks; do not rely on a shared production client or store tokens in fixtures.
+
+For job-provider changes, mock empty, malformed, non-success, slow, and successful responses. Do not call the real endpoint with the exposed credential.
