@@ -51,3 +51,7 @@ Remote fonts, icons, images, and any assets added to the project may have separa
 ### Attribution and citation
 
 For the project citation metadata, see CITATION.cff. Citation does not replace permission or license review for third-party datasets and model files.
+
+### Additional information
+
+The repository README documents known material whose rights are not established. If ownership or license status is unclear, do not assume it is covered by this MIT grant; contact the maintainer before reuse.
