@@ -43,3 +43,5 @@ They do not certify model accuracy, privacy, security, or data rights.
 - The app calls NLTK download functions during script execution even though the current prediction path does not use those resources.
 
 - The notebook trains several classifiers in a loop and saves the final loop classifier and TF-IDF vectorizer; it does not save the LabelEncoder.
+
+- The CSV labels are imbalanced, with category counts ranging from 20 to 84 examples in the inspected snapshot.
