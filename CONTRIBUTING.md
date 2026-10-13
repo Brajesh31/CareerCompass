@@ -93,3 +93,7 @@ and that its source and license are identified. Original project code is
 offered under the MIT License in [LICENSE](LICENSE); the license status of the
 résumé dataset, notebook example, trained model, and third-party assets has not
 been established. Follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+### Training and evaluation detail
+
+When revising training code, record the exact data version, class distribution, random seed, preprocessing, and model parameters. Keep the evaluation partition outside vocabulary fitting, threshold selection, and any other model decisions.
