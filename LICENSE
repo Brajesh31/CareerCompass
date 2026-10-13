@@ -35,3 +35,7 @@ The training notebook contains résumé material in its source. No reuse permiss
 ### Serialized model artifacts
 
 The repository does not document the provenance, training-data permissions, or separate license status of clf.pkl and tfidf.pkl. Review those rights independently before redistributing the artifacts.
+
+### Third-party services and data
+
+Google OAuth, ScrapingDog job data, and any information returned by those providers remain subject to their respective terms. This repository license does not grant rights to those services or their data.
