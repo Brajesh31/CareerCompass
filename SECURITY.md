@@ -74,3 +74,7 @@ Because the API credential is present in public source, request revocation or ro
 ### Git history
 
 Removing a credential from the current file does not revoke it and does not remove old commits. Rotate first. History rewriting may be considered only after collaborators are coordinated and the repository owner explicitly authorizes a force push.
+
+### Untrusted provider content
+
+The job-position field is interpolated into markup rendered with unsafe HTML. A fix should escape the value or render it as plain text, validate response fields, and avoid rendering provider-controlled HTML.
