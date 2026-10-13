@@ -58,3 +58,5 @@ For an upload issue, describe the file extension, approximate size, and encoding
 For an OAuth issue, report whether the configured redirect matches the callback registered with Google. Never include the client secret, authorization code, or token.
 
 For missing job listings, report the response status and sanitized provider error if available. The current app may show an empty result for provider errors, and its credential must be rotated before further calls.
+
+For a model issue, describe the expected and observed category using fictional text and identify whether the predicted ID is one of the mismapped labels 10–13.
