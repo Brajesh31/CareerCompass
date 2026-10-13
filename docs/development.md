@@ -98,3 +98,5 @@ For job-provider changes, mock empty, malformed, non-success, slow, and successf
 For HTML changes, include synthetic provider fields containing angle brackets and script-like strings, then verify they are shown as text rather than interpreted markup.
 
 For file handling changes, test extension/content mismatches, empty input, invalid encodings, and oversized inputs using synthetic fixtures.
+
+For any dataset or artifact change, record the source URL or origin, retrieval date, license, consent basis, preprocessing steps, and a checksum or version identifier where appropriate.
