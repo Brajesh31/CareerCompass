@@ -161,3 +161,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [Deployment](docs/deployment.md): pre-deployment blockers and hosting guidance.
 
 - [API](docs/api.md): current OAuth and external job-search integrations.
+
+- [Database and data handling](docs/database.md): what the app processes and what it does not persist.
