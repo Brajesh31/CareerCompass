@@ -43,3 +43,6 @@ indent_size = 4
 
 [.gitignore]
 indent_size = 2
+
+[.gitattributes]
+indent_size = 2
