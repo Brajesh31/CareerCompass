@@ -96,3 +96,7 @@ The notebook iterates through several classifiers and saves the final loop value
 ## Has the model's accuracy been established?
 
 The notebook calculates evaluation scores, but its TF-IDF vectorizer is fitted to all résumé rows before the train/test split. This leaks information from the eventual test partition into preprocessing. The repository does not provide a clean, independently reproducible evaluation suitable for real-world use.
+
+## What does text cleaning change?
+
+The cleaner removes URLs, every occurrence of the strings RT or cc, hashtags, mentions, punctuation, non-ASCII characters, and repeated whitespace. These broad substitutions may remove meaningful words, names, abbreviations, or technical details and can change predictions.
