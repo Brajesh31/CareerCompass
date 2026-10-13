@@ -87,3 +87,9 @@ Run Streamlit from the repository root so relative paths to the model files
 resolve as expected. Confirm that clf.pkl and tfidf.pkl are present in the
 deployment checkout and that the published branch includes the intended
 artifacts. Do not replace them with files from an untrusted source.
+### Model cannot be deserialized
+
+Pickle compatibility depends on the Python and library versions used to create
+the artifact. Compare the runtime with the environment used by the notebook,
+then regenerate and review the artifacts through a trusted process if needed.
+Never attempt to fix this by loading an unknown pickle from a user or issue.
