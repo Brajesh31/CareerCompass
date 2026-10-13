@@ -81,3 +81,9 @@ The supported user interaction is the Streamlit page and its session state. The
 repository does not register application-owned REST routes or define a stable
 JSON contract. Streamlit's own internal transport endpoints are framework
 details and should not be treated as public project APIs.
+### Authentication flow boundaries
+
+The app requests OpenID Connect identity scopes through the OAuth component.
+Authentication establishes a sign-in flow; it does not by itself define
+application roles, hiring permissions, or access to a separately managed
+account record. Do not describe this as authorization for employment use.
