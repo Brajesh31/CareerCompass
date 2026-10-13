@@ -78,3 +78,7 @@ Removing a credential from the current file does not revoke it and does not remo
 ### Untrusted provider content
 
 The job-position field is interpolated into markup rendered with unsafe HTML. A fix should escape the value or render it as plain text, validate response fields, and avoid rendering provider-controlled HTML.
+
+### Uploaded documents
+
+The file control checks an extension but the current code decodes raw bytes as text. A future parser should enforce size limits, validate actual file type, handle malformed input, and avoid retaining temporary content longer than necessary.
