@@ -82,3 +82,7 @@ The job-position field is interpolated into markup rendered with unsafe HTML. A 
 ### Uploaded documents
 
 The file control checks an extension but the current code decodes raw bytes as text. A future parser should enforce size limits, validate actual file type, handle malformed input, and avoid retaining temporary content longer than necessary.
+
+### Serialized model files
+
+Treat clf.pkl and tfidf.pkl as executable inputs during deserialization. Restrict write access to model artifacts, verify their origin and integrity, and never accept replacement pickle files from app users.
