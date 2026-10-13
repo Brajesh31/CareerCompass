@@ -111,3 +111,9 @@ Check that the configured provider allows the exact deployed redirect URL and
 that the OAuth component and app use matching client credentials. The active
 code reads OAuth values from environment variables. Do not paste client
 secrets, authorization codes, or callback URLs containing tokens into issues.
+### Hosted OAuth settings are missing
+
+The deployment guide may store credentials using the hosting platform's
+secrets interface, but the current code reads process environment variables.
+Verify that the deployment exposes the expected variables to the process.
+Never commit a secrets file as a workaround.
