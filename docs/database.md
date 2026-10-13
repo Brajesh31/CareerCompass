@@ -94,3 +94,9 @@ decoding and inference. Avoid copying the content into logs, exception text,
 analytics events, caches, or debugging output. A lack of an application
 database is not a guarantee about temporary memory, platform handling, or
 crash diagnostics.
+### Document model artifact provenance
+
+The classifier and vectorizer are serialized pickle files. Record their
+training source, generation date, expected package versions, label order, and
+integrity checks in a controlled release process. Only load artifacts obtained
+from a trusted source because pickle data can execute code when deserialized.
