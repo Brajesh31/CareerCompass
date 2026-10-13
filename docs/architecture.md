@@ -113,3 +113,7 @@ The vectorizer and classifier run in the Streamlit process. The integer predicti
 ### Job request shape
 
 The external request sends a category field and fixed location/page parameters. It is a role search, not a semantic similarity comparison between the uploaded document and each listing.
+
+### Rendering boundary
+
+Company, location, date, and link fields use Streamlit text rendering; job_position is inserted into raw HTML. The distinct rendering path means that field requires explicit escaping.
