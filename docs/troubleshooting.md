@@ -105,3 +105,9 @@ The current implementation decodes uploaded bytes as text; it does not extract
 PDF content. The file chooser accepting a PDF extension does not mean PDF
 parsing is supported. Use a synthetic plain-text file for local checks and do
 not submit a real résumé.
+### OAuth redirect fails
+
+Check that the configured provider allows the exact deployed redirect URL and
+that the OAuth component and app use matching client credentials. The active
+code reads OAuth values from environment variables. Do not paste client
+secrets, authorization codes, or callback URLs containing tokens into issues.
