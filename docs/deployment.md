@@ -103,3 +103,5 @@ The current app reads OAuth values with os.getenv. Store values through the host
 Community Cloud lets the deployer choose a Python version during app creation. This repository has no version declaration, so select only after checking the pinned packages and model pickle compatibility.
 
 The deployment source includes the tracked CSV, notebook, and model artifacts. A hosted build receives repository content; review whether each file belongs in a deployable source tree and whether any data should be removed from public distribution.
+
+A public GitHub repository already exposes tracked files independently of the running app. Deployment access controls do not make the dataset, notebook example, or source credential private.
