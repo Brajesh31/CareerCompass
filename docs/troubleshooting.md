@@ -123,3 +123,9 @@ An empty list can mean no matching jobs or a provider error because the current
 code treats non-success status responses as no results. Check sanitized
 deployment logs and provider status, then review credentials and quotas. Rotate
 the exposed credential before making further calls.
+### Search request appears to hang
+
+The current outbound job-search request has no explicit timeout. A slow
+provider can therefore delay the page. Avoid repeatedly refreshing against a
+failing service; add a finite timeout and a bounded retry policy as a code
+change before relying on the integration.
