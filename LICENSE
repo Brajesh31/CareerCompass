@@ -31,3 +31,7 @@ The repository does not establish the source, consent basis, or redistribution l
 ### Notebook examples
 
 The training notebook contains résumé material in its source. No reuse permission for that personal information is established by the MIT notice above.
+
+### Serialized model artifacts
+
+The repository does not document the provenance, training-data permissions, or separate license status of clf.pkl and tfidf.pkl. Review those rights independently before redistributing the artifacts.
