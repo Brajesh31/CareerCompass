@@ -84,3 +84,7 @@ See [installation.md](installation.md) for local setup,
 [development.md](development.md) for safe changes, and
 [CONTRIBUTING.md](../CONTRIBUTING.md) for project guidelines. Use synthetic
 text only.
+
+## What training data is included?
+
+The tracked CSV contains 962 résumé text rows assigned to 25 categories. Category sizes vary, and the repository does not document where the content came from, how consent was obtained, or whether redistribution is permitted. Do not assume that inclusion in Git makes the data free to reuse.
