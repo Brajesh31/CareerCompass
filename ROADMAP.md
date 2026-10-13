@@ -83,3 +83,7 @@ Credential rotation includes revoking the exposed provider key, checking its usa
 ### Dataset decision
 
 Before further model work, record the résumé dataset source, rights, consent basis, and permitted uses. If these cannot be demonstrated, remove the dataset and sample content from future distribution and use synthetic or properly licensed material.
+
+### Label integrity
+
+Persist the encoder with the classifier and derive output labels from the trained class list. Add a consistency check that covers every class ID, including the current mismatch at IDs 10–13.
