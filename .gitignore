@@ -1,4 +1,35 @@
-__pycache__
-client_secret_*.json
+# Python bytecode and runtime/tool caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Local credentials and secrets
 .env
-venv
+.env.*
+!.env.example
+client_secret_*.json
+.streamlit/secrets.toml
+secrets.toml
+
+# Build/package output
+build/
+dist/
+*.egg-info/
+
+# Local IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
