@@ -119,3 +119,5 @@ The repository does not pin Python or provide a lockfile. Record the interpreter
 Installing requirements needs access to the configured Python package index. Starting the app also attempts to download NLTK resources, so a fully offline first run is not supported by the current script.
 
 Google OAuth requires valid credentials and a callback registered for the configured redirect. The supplied environment template contains placeholders only and cannot change the redirect URI.
+
+Streamlit Community Cloud secrets use the Streamlit secret mechanism, while the current OAuth code reads os.getenv. Update that integration before expecting hosted secrets to populate the current environment lookup.
