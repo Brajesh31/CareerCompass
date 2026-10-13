@@ -169,3 +169,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [FAQ](docs/faq.md): common questions about categories, privacy, and model limits.
 
 For contribution and operations guidance, see [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), and [ROADMAP.md](ROADMAP.md).
+
+Last updated: 2026-10-13 16:00 UTC
