@@ -117,3 +117,7 @@ The external request sends a category field and fixed location/page parameters. 
 ### Rendering boundary
 
 Company, location, date, and link fields use Streamlit text rendering; job_position is inserted into raw HTML. The distinct rendering path means that field requires explicit escaping.
+
+### State duration
+
+The app does not call a database or explicitly save an upload, but Streamlit session state and upload handling exist while the session is active. Host logs and temporary storage require separate deployment review.
