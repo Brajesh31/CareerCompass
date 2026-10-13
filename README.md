@@ -159,3 +159,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [Development](docs/development.md): safe change, data, and model practices.
 
 - [Deployment](docs/deployment.md): pre-deployment blockers and hosting guidance.
+
+- [API](docs/api.md): current OAuth and external job-search integrations.
