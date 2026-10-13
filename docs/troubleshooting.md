@@ -93,3 +93,9 @@ Pickle compatibility depends on the Python and library versions used to create
 the artifact. Compare the runtime with the environment used by the notebook,
 then regenerate and review the artifacts through a trusted process if needed.
 Never attempt to fix this by loading an unknown pickle from a user or issue.
+### Category label does not match the model
+
+The app maintains its own integer-to-category mapping, while the notebook
+derives label order with LabelEncoder. Those mappings differ for class IDs
+10–13. Compare the saved classifier labels, notebook encoding, and app mapping
+before relying on any category output.
