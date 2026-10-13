@@ -81,3 +81,9 @@ The application does not define a database connection, schema, migration, or
 repository-managed persistence layer. This does not establish that every
 deployment component is storage-free: identity providers, the hosting platform,
 and external job-search services have separate handling and retention rules.
+### Minimize session data
+
+Streamlit session state is used for OAuth flow and signed-in user information.
+Keep session values limited to what the current screen needs, avoid storing
+résumé contents or derived personal details there, and clear sensitive values
+when the session ends where the framework permits.
