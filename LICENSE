@@ -27,3 +27,7 @@ The MIT grant above applies to original project code and documentation only to t
 ### Résumé dataset
 
 The repository does not establish the source, consent basis, or redistribution license for the résumé text in UpdatedResumeDataSet.csv. This notice does not create rights to reuse or republish that data.
+
+### Notebook examples
+
+The training notebook contains résumé material in its source. No reuse permission for that personal information is established by the MIT notice above.
