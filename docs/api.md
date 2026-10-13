@@ -101,3 +101,10 @@ parameters to the external job-search provider. The current request does not
 intentionally send the uploaded résumé text. Recheck this behavior whenever
 the request construction changes, and review provider terms and deployment
 logs before making privacy commitments.
+### Validate provider responses
+
+Treat the remote response as untrusted input. Check status, content type, JSON
+parsing, top-level shape, and the type and presence of every displayed field.
+Handle an empty result separately from network, authentication, quota, and
+schema failures so users can understand what happened without exposing
+secrets or stack traces.
