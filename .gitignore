@@ -35,3 +35,4 @@ dist/
 Thumbs.db
 .cache/
 .tox/
+.nox/
