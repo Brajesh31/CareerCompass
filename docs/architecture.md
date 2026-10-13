@@ -85,3 +85,7 @@ design, model metrics, and automated tests. The UI accepts `.pdf` but treats
 the bytes as text. The job-position field is inserted into HTML with unsafe
 rendering. These gaps make the current project a prototype only, not a safe
 automated employment decision system.
+
+### Startup and script reruns
+
+Imports, dotenv loading, model deserialization, and NLTK download calls occur at module level in app.py. Streamlit executes the script again when the user interacts, so startup work is coupled to the page rerun path.
