@@ -109,3 +109,5 @@ A public GitHub repository already exposes tracked files independently of the ru
 The Google OAuth button is a gate in the UI, but the app does not document identity-based permissions or a durable user model. Do not treat the presence of a sign-in screen as a complete privacy or authorization design.
 
 The job-search provider call runs after a successful prediction. Until a rotated key is read securely and provider calls are bounded, do not expose the app to public traffic.
+
+The page also fetches a background image from an external image host. Decide whether that third-party request is acceptable for the intended audience and document it in the privacy notice.
