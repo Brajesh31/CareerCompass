@@ -98,3 +98,7 @@ Inspect the OAuth component's callback, state validation, token payload handling
 ### Static and dependency checks
 
 Use maintained, reviewable dependency versions and scan the application, notebook, histories, and deployed settings for secrets before release. Any automated scan should avoid printing discovered credential values.
+
+### Reporter safety
+
+Do not request that a reporter upload a real résumé to demonstrate a security issue. Reproduce problems with synthetic content and delete sensitive report attachments when it is safe and authorized to do so.
