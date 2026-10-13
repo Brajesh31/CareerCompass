@@ -37,3 +37,6 @@ indent_size = 4
 
 [*.csv]
 trim_trailing_whitespace = false
+
+[requirements.txt]
+indent_size = 4
