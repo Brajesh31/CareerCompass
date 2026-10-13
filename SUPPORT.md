@@ -56,3 +56,5 @@ For a package issue, include the failing package name and pinned version from re
 For an upload issue, describe the file extension, approximate size, and encoding using a synthetic sample. Do not send a real résumé as a reproduction attachment.
 
 For an OAuth issue, report whether the configured redirect matches the callback registered with Google. Never include the client secret, authorization code, or token.
+
+For missing job listings, report the response status and sanitized provider error if available. The current app may show an empty result for provider errors, and its credential must be rotated before further calls.
