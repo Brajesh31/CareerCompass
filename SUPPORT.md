@@ -62,3 +62,5 @@ For missing job listings, report the response status and sanitized provider erro
 For a model issue, describe the expected and observed category using fictional text and identify whether the predicted ID is one of the mismapped labels 10–13.
 
 For a repository-data or privacy concern, identify the path and concern privately without copying the personal material into an issue or support request.
+
+Support is best effort and cannot validate the classifier for hiring, diagnose third-party accounts, rotate credentials on the maintainer's behalf, or certify that a host retains no data.
