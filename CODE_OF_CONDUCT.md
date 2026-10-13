@@ -62,6 +62,8 @@ project in public. It is adapted for this repository from the Contributor
 Covenant community-code-of-conduct model. For project expectations, see
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Additional guidance
+
 ### Technical disagreement
 
 Disagree with proposals by explaining the specific behavior, evidence, and tradeoff. Avoid sarcasm, personal judgments, or assumptions about a contributor's motives.
