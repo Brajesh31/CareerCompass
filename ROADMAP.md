@@ -95,3 +95,7 @@ Choose either a tested PDF parser with file-size and content validation or a tex
 ### Safe provider integration
 
 Escape all job fields, validate the provider response schema, set a finite request timeout, and report provider failures separately from a successful empty search.
+
+### Evaluation plan
+
+Rebuild the training pipeline with preprocessing fit only on training data. Report per-class precision, recall, F1, and known limitations, and keep the final evaluation data isolated.
