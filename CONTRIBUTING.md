@@ -97,3 +97,7 @@ been established. Follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 ### Training and evaluation detail
 
 When revising training code, record the exact data version, class distribution, random seed, preprocessing, and model parameters. Keep the evaluation partition outside vocabulary fitting, threshold selection, and any other model decisions.
+
+### Class labels
+
+Treat the encoder and category names as one artifact. The current notebook's LabelEncoder and app.py's manual mapping disagree for IDs 10–13. A proposed fix should verify every label against the trained model rather than relying on the displayed category alone.
