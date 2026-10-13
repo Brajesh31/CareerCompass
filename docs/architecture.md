@@ -89,3 +89,7 @@ automated employment decision system.
 ### Startup and script reruns
 
 Imports, dotenv loading, model deserialization, and NLTK download calls occur at module level in app.py. Streamlit executes the script again when the user interacts, so startup work is coupled to the page rerun path.
+
+### File path assumptions
+
+The model files are opened relative to the process working directory, not through the script_directory variable. Local and hosted launch commands must run with the repository root as the working directory.
