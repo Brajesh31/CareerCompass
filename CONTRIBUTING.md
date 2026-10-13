@@ -125,3 +125,7 @@ The pinned requirements include a broad package snapshot. For dependency changes
 ### Notebook and artifact review
 
 Do not commit new notebook output until it has been checked for personal information. Describe how model artifacts were generated and verify that their data and code sources can legally be redistributed.
+
+### Product-use boundaries
+
+Do not add features that imply objective candidate ranking or guaranteed career fit. Any change touching employment outcomes requires a separate assessment of validity, fairness, notice, appeal, and human oversight.
