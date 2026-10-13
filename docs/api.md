@@ -126,3 +126,9 @@ Do not put résumé text, filenames containing personal details, OAuth tokens,
 or raw uploaded bytes in telemetry, issue reports, or example requests.
 Production diagnostics should use request identifiers and sanitized error
 categories instead of personal content.
+### Version future interfaces
+
+If a programmatic API is added, document its owner, versioning and deprecation
+policy, authentication, authorization, input size limits, supported file
+formats, rate limits, response schema, and error codes. Add examples made only
+from synthetic data and explain the classifier's evaluation limitations.
