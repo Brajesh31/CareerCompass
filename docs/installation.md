@@ -121,3 +121,5 @@ Installing requirements needs access to the configured Python package index. Sta
 Google OAuth requires valid credentials and a callback registered for the configured redirect. The supplied environment template contains placeholders only and cannot change the redirect URI.
 
 Streamlit Community Cloud secrets use the Streamlit secret mechanism, while the current OAuth code reads os.getenv. Update that integration before expecting hosted secrets to populate the current environment lookup.
+
+Use only model artifacts produced from a trusted source and compatible with the installed scikit-learn version. The repository does not publish an artifact build manifest.
