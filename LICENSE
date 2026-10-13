@@ -47,3 +47,7 @@ Python packages listed in requirements.txt are third-party works and retain thei
 ### External assets
 
 Remote fonts, icons, images, and any assets added to the project may have separate copyright and license conditions. Check each source before shipping or reusing them.
+
+### Attribution and citation
+
+For the project citation metadata, see CITATION.cff. Citation does not replace permission or license review for third-party datasets and model files.
