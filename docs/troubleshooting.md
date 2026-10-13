@@ -117,3 +117,9 @@ The deployment guide may store credentials using the hosting platform's
 secrets interface, but the current code reads process environment variables.
 Verify that the deployment exposes the expected variables to the process.
 Never commit a secrets file as a workaround.
+### Search returns no results after prediction
+
+An empty list can mean no matching jobs or a provider error because the current
+code treats non-success status responses as no results. Check sanitized
+deployment logs and provider status, then review credentials and quotas. Rotate
+the exposed credential before making further calls.
