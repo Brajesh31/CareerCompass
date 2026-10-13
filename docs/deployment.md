@@ -111,3 +111,5 @@ The Google OAuth button is a gate in the UI, but the app does not document ident
 The job-search provider call runs after a successful prediction. Until a rotated key is read securely and provider calls are bounded, do not expose the app to public traffic.
 
 The page also fetches a background image from an external image host. Decide whether that third-party request is acceptable for the intended audience and document it in the privacy notice.
+
+A deployable release should have a runbook for disabling uploads, rotating provider credentials, reviewing logs, and notifying affected users if résumé data or secrets are exposed.
