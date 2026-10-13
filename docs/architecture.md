@@ -93,3 +93,7 @@ Imports, dotenv loading, model deserialization, and NLTK download calls occur at
 ### File path assumptions
 
 The model files are opened relative to the process working directory, not through the script_directory variable. Local and hosted launch commands must run with the repository root as the working directory.
+
+### OAuth state
+
+The returned OAuth result is assigned to st.session_state under the token key, then the page reruns. The application does not define a separate durable account record or explicit sign-out button.
