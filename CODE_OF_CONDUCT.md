@@ -81,3 +81,7 @@ Do not publish API keys, OAuth tokens, private messages, confidential logs, or d
 ### Employment-related claims
 
 Do not use project discussions to promote discriminatory selection criteria or claim that a model score proves a person's competence, character, or employability.
+
+### Project representation
+
+When speaking on behalf of Career Compass, describe the classifier as experimental and communicate its limitations. Do not claim that the project has validated privacy or fairness controls that are not implemented.
