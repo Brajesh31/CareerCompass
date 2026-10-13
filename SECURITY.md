@@ -94,3 +94,7 @@ The job-search request has no explicit timeout or retry bounds. Network calls sh
 ### OAuth session review
 
 Inspect the OAuth component's callback, state validation, token payload handling, and session lifetime against the installed library version. Avoid treating a token's mere presence as a complete identity or authorization policy.
+
+### Static and dependency checks
+
+Use maintained, reviewable dependency versions and scan the application, notebook, histories, and deployed settings for secrets before release. Any automated scan should avoid printing discovered credential values.
