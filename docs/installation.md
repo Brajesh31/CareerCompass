@@ -113,3 +113,5 @@ The repository .gitignore excludes .venv and venv directories. Keep the environm
 The pinned requirements file is a broad snapshot rather than a minimal list for app.py. Installing it may take longer than installing only the runtime packages because it includes notebook and unrelated framework dependencies.
 
 Streamlit is pinned to version 1.32.2 in the current requirements file. This is the version expected by the existing environment snapshot, not a guarantee that it is compatible with every current Python release.
+
+The repository does not pin Python or provide a lockfile. Record the interpreter version used for any reproduction and choose one compatible with the pinned package set.
