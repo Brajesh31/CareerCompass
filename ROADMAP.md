@@ -91,3 +91,7 @@ Persist the encoder with the classifier and derive output labels from the traine
 ### File-format decision
 
 Choose either a tested PDF parser with file-size and content validation or a text-only interface. Do not advertise a file type merely because the uploader accepts its extension.
+
+### Safe provider integration
+
+Escape all job fields, validate the provider response schema, set a finite request timeout, and report provider failures separately from a successful empty search.
