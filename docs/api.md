@@ -94,3 +94,10 @@ Streamlit Community Cloud also supports its own secrets configuration, but the
 repository does not currently read those values through st.secrets. Confirm
 the deployment's configuration bridge before expecting hosted sign-in to work.
 Keep all actual credentials outside Git.
+### Job-search request scope
+
+After prediction, the app sends the predicted category and configured search
+parameters to the external job-search provider. The current request does not
+intentionally send the uploaded résumé text. Recheck this behavior whenever
+the request construction changes, and review provider terms and deployment
+logs before making privacy commitments.
