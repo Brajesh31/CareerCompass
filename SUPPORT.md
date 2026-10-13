@@ -44,3 +44,7 @@ The repository contains a résumé-category classifier and job-search integratio
 prototype. Its data provenance, consent basis, model evaluation, and retention
 behavior have not been established sufficiently for use with real résumés.
 Review [docs/database.md](docs/database.md) before deploying or sharing data.
+
+## Diagnostic checklist
+
+For an installation or startup issue, include the command used, current directory, Python version, operating system, and whether the failure occurs during dependency installation or app startup.
