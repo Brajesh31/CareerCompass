@@ -101,3 +101,7 @@ The returned OAuth result is assigned to st.session_state under the token key, t
 ### Input decoding
 
 The uploader reads the entire file into memory. UTF-8 decoding is attempted first and Latin-1 is used after a UnicodeDecodeError; there is no parser branch for PDF structure or upload-size limit.
+
+### Preprocessing boundaries
+
+clean_resume applies substitutions before TF-IDF. It removes the literal strings RT and cc without word-boundary checks, which can alter unrelated words as well as common résumé markers.
