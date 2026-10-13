@@ -97,3 +97,7 @@ The model files are opened relative to the process working directory, not throug
 ### OAuth state
 
 The returned OAuth result is assigned to st.session_state under the token key, then the page reruns. The application does not define a separate durable account record or explicit sign-out button.
+
+### Input decoding
+
+The uploader reads the entire file into memory. UTF-8 decoding is attempted first and Latin-1 is used after a UnicodeDecodeError; there is no parser branch for PDF structure or upload-size limit.
