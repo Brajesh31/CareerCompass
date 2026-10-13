@@ -113,3 +113,7 @@ For OAuth work, document the redirect URI for each environment, token handling, 
 ### Provider response rendering
 
 Treat all job-provider fields as untrusted. Render text safely, validate required fields and types, distinguish an empty result from provider failure, and set finite network timeouts.
+
+### External data flow
+
+The current job-search request is based on a predicted category and a fixed geography value. If a change sends additional résumé content, explain the purpose, provider, retention, and user notice before implementation.
