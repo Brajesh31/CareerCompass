@@ -86,3 +86,5 @@ they contain no personal or confidential information.
 ## Focused review checks
 
 For changes to clean_resume, use fictional edge-case strings that include URLs, hashtags, punctuation, non-ASCII text, and the substrings RT and cc inside ordinary words.
+
+For a label-map change, compare all 25 integer classes against the encoder classes and include assertions for every mapping instead of checking only one prediction.
