@@ -157,3 +157,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [Installation](docs/installation.md): Python environment, OAuth setup, and local run instructions.
 
 - [Development](docs/development.md): safe change, data, and model practices.
+
+- [Deployment](docs/deployment.md): pre-deployment blockers and hosting guidance.
