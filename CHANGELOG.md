@@ -37,3 +37,5 @@ They do not certify model accuracy, privacy, security, or data rights.
 ### Additional review findings
 
 - The active page is app.py; session_state.py is a legacy helper that the page does not import.
+
+- OAuth uses Google authorization and token endpoints, requests openid email profile, and stores the returned value in Streamlit session state.
