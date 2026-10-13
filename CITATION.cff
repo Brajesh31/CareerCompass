@@ -12,6 +12,12 @@ authors:
     alias: brajesh31
 repository-code: 'https://github.com/Brajesh31/CareerCompass'
 license: MIT
+abstract: >-
+  An experimental Streamlit application that classifies uploaded résumé text
+  into job categories and requests matching listings from an external service.
+  The bundled data, model artifacts, privacy properties, and classification
+  quality are not independently validated; this software is not suitable for
+  hiring or other consequential employment decisions.
 keywords:
   - Streamlit
   - resume classification
