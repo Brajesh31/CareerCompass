@@ -82,3 +82,7 @@ Open a pull request against `main`. Summarize the user need, implementation,
 data sources and licenses, privacy and security impact, validation performed,
 and remaining limitations. For interface changes, add screenshots only when
 they contain no personal or confidential information.
+
+## Focused review checks
+
+For changes to clean_resume, use fictional edge-case strings that include URLs, hashtags, punctuation, non-ASCII text, and the substrings RT and cc inside ordinary words.
