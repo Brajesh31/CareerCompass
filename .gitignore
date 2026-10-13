@@ -39,3 +39,4 @@ Thumbs.db
 .hypothesis/
 *.log
 *.tmp
+*.swp
