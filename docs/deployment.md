@@ -93,3 +93,7 @@ application and OAuth-client configuration change.
 
 For local setup, see [installation.md](installation.md). For operational
 security findings, see [SECURITY.md](../SECURITY.md).
+
+## Additional deployment review points
+
+Community Cloud detects dependency-file changes and may rebuild the environment. Review build logs after requirements changes and keep a record of the Python and package versions used for the published app.
