@@ -100,3 +100,10 @@ The classifier and vectorizer are serialized pickle files. Record their
 training source, generation date, expected package versions, label order, and
 integrity checks in a controlled release process. Only load artifacts obtained
 from a trusted source because pickle data can execute code when deserialized.
+### Review training data rights
+
+The repository includes a résumé dataset and a notebook. The available project
+materials do not establish participant consent, legal basis, or redistribution
+rights. Resolve provenance and permitted uses before redistributing data,
+training new artifacts, or publishing examples derived from individual
+records.
