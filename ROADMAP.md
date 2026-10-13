@@ -99,3 +99,7 @@ Escape all job fields, validate the provider response schema, set a finite reque
 ### Evaluation plan
 
 Rebuild the training pipeline with preprocessing fit only on training data. Report per-class precision, recall, F1, and known limitations, and keep the final evaluation data isolated.
+
+### OAuth and session lifecycle
+
+Review redirect URIs, state validation, scopes, token expiration, sign-out, revocation, and the host's secure-secret mechanism before relying on Google sign-in.
