@@ -109,3 +109,5 @@ for common setup issues.
 ## Additional setup notes
 
 The repository .gitignore excludes .venv and venv directories. Keep the environment outside tracked source and verify that .env remains untracked after local OAuth setup.
+
+The pinned requirements file is a broad snapshot rather than a minimal list for app.py. Installing it may take longer than installing only the runtime packages because it includes notebook and unrelated framework dependencies.
