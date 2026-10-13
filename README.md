@@ -167,3 +167,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [Troubleshooting](docs/troubleshooting.md): common startup, upload, model, and provider failures.
 
 - [FAQ](docs/faq.md): common questions about categories, privacy, and model limits.
+
+For contribution and operations guidance, see [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), and [ROADMAP.md](ROADMAP.md).
