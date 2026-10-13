@@ -101,3 +101,5 @@ Community Cloud detects dependency-file changes and may rebuild the environment.
 The current app reads OAuth values with os.getenv. Store values through the host's supported mechanism only after the code has been updated to retrieve them; a secret stored in a dashboard but not read by the app does not configure authentication.
 
 Community Cloud lets the deployer choose a Python version during app creation. This repository has no version declaration, so select only after checking the pinned packages and model pickle compatibility.
+
+The deployment source includes the tracked CSV, notebook, and model artifacts. A hosted build receives repository content; review whether each file belongs in a deployable source tree and whether any data should be removed from public distribution.
