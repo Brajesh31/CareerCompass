@@ -115,3 +115,5 @@ The pinned requirements file is a broad snapshot rather than a minimal list for 
 Streamlit is pinned to version 1.32.2 in the current requirements file. This is the version expected by the existing environment snapshot, not a guarantee that it is compatible with every current Python release.
 
 The repository does not pin Python or provide a lockfile. Record the interpreter version used for any reproduction and choose one compatible with the pinned package set.
+
+Installing requirements needs access to the configured Python package index. Starting the app also attempts to download NLTK resources, so a fully offline first run is not supported by the current script.
