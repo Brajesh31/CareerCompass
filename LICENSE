@@ -43,3 +43,7 @@ Google OAuth, ScrapingDog job data, and any information returned by those provid
 ### Dependencies
 
 Python packages listed in requirements.txt are third-party works and retain their own licenses and notices. Review each dependency's license before redistribution.
+
+### External assets
+
+Remote fonts, icons, images, and any assets added to the project may have separate copyright and license conditions. Check each source before shipping or reusing them.
