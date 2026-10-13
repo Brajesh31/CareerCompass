@@ -103,3 +103,7 @@ Rebuild the training pipeline with preprocessing fit only on training data. Repo
 ### OAuth and session lifecycle
 
 Review redirect URIs, state validation, scopes, token expiration, sign-out, revocation, and the host's secure-secret mechanism before relying on Google sign-in.
+
+### Testability
+
+Separate preprocessing, inference, and provider access from Streamlit rendering so each can be reviewed with synthetic fixtures and mocked network responses.
