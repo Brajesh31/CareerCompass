@@ -121,3 +121,7 @@ The current job-search request is based on a predicted category and a fixed geog
 ### Dependency updates
 
 The pinned requirements include a broad package snapshot. For dependency changes, state why the package is needed, review its license and security status, and check compatibility with the serialized model artifacts.
+
+### Notebook and artifact review
+
+Do not commit new notebook output until it has been checked for personal information. Describe how model artifacts were generated and verify that their data and code sources can legally be redistributed.
