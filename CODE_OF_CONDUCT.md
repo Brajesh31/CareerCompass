@@ -61,3 +61,7 @@ This Code applies in repository spaces and when someone is representing the
 project in public. It is adapted for this repository from the Contributor
 Covenant community-code-of-conduct model. For project expectations, see
 [CONTRIBUTING.md](CONTRIBUTING.md).
+
+### Technical disagreement
+
+Disagree with proposals by explaining the specific behavior, evidence, and tradeoff. Avoid sarcasm, personal judgments, or assumptions about a contributor's motives.
