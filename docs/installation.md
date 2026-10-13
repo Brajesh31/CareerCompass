@@ -105,3 +105,7 @@ for common setup issues.
 - [Deployment considerations](deployment.md)
 - [Architecture and data flow](architecture.md)
 - [Data handling](database.md)
+
+## Additional setup notes
+
+The repository .gitignore excludes .venv and venv directories. Keep the environment outside tracked source and verify that .env remains untracked after local OAuth setup.
