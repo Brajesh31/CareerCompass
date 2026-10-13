@@ -96,3 +96,5 @@ For OAuth changes, mock authorization/token responses in development checks; do 
 For job-provider changes, mock empty, malformed, non-success, slow, and successful responses. Do not call the real endpoint with the exposed credential.
 
 For HTML changes, include synthetic provider fields containing angle brackets and script-like strings, then verify they are shown as text rather than interpreted markup.
+
+For file handling changes, test extension/content mismatches, empty input, invalid encodings, and oversized inputs using synthetic fixtures.
