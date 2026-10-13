@@ -86,3 +86,7 @@ The file control checks an extension but the current code decodes raw bytes as t
 ### Serialized model files
 
 Treat clf.pkl and tfidf.pkl as executable inputs during deserialization. Restrict write access to model artifacts, verify their origin and integrity, and never accept replacement pickle files from app users.
+
+### Outbound request behavior
+
+The job-search request has no explicit timeout or retry bounds. Network calls should use finite timeouts, validate TLS, handle provider status codes distinctly, and avoid exposing credentials in logs or exception output.
