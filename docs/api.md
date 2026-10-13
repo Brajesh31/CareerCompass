@@ -87,3 +87,10 @@ The app requests OpenID Connect identity scopes through the OAuth component.
 Authentication establishes a sign-in flow; it does not by itself define
 application roles, hiring permissions, or access to a separately managed
 account record. Do not describe this as authorization for employment use.
+### Configuration source
+
+The active Python code reads OAuth values from process environment variables.
+Streamlit Community Cloud also supports its own secrets configuration, but the
+repository does not currently read those values through st.secrets. Confirm
+the deployment's configuration bridge before expecting hosted sign-in to work.
+Keep all actual credentials outside Git.
