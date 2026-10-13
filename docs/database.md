@@ -126,3 +126,9 @@ Any future database or cache needs a written purpose, fields, access roles,
 encryption approach, retention period, deletion path, backup lifecycle, and
 incident process. Make deletion observable and test it across primary records,
 derived data, and backups before promising users that their data is removed.
+### Reassess privacy after deployment changes
+
+Adding analytics, persistent sessions, a database, file parsing, model
+monitoring, or another external provider changes the data flow. Update this
+guide, the architecture, and the user-facing notice together, and review
+applicable privacy obligations before enabling the new path.
