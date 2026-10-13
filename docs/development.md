@@ -100,3 +100,5 @@ For HTML changes, include synthetic provider fields containing angle brackets an
 For file handling changes, test extension/content mismatches, empty input, invalid encodings, and oversized inputs using synthetic fixtures.
 
 For any dataset or artifact change, record the source URL or origin, retrieval date, license, consent basis, preprocessing steps, and a checksum or version identifier where appropriate.
+
+Before review, compare README, architecture, API, and database guides with the actual data flow so that claims about uploads, outbound requests, and retention stay consistent.
