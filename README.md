@@ -163,3 +163,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [API](docs/api.md): current OAuth and external job-search integrations.
 
 - [Database and data handling](docs/database.md): what the app processes and what it does not persist.
+
+- [Troubleshooting](docs/troubleshooting.md): common startup, upload, model, and provider failures.
