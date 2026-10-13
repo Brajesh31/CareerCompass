@@ -117,3 +117,5 @@ Streamlit is pinned to version 1.32.2 in the current requirements file. This is 
 The repository does not pin Python or provide a lockfile. Record the interpreter version used for any reproduction and choose one compatible with the pinned package set.
 
 Installing requirements needs access to the configured Python package index. Starting the app also attempts to download NLTK resources, so a fully offline first run is not supported by the current script.
+
+Google OAuth requires valid credentials and a callback registered for the configured redirect. The supplied environment template contains placeholders only and cannot change the redirect URI.
