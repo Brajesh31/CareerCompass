@@ -114,3 +114,9 @@ rather than intentionally forwarding the résumé text. Verify the exact
 outbound request and provider contract after code changes. Do not claim that
 no personal data is shared until all identifiers, logs, and deployment
 integrations have been reviewed.
+### Establish log boundaries
+
+Review Streamlit hosting logs, OAuth provider records, network diagnostics,
+and job-search provider logs for access, contents, retention, and deletion
+controls. Configure redaction so tokens, personal identifiers, filenames, and
+résumé text are not captured in routine operational logs.
