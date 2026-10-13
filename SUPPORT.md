@@ -52,3 +52,5 @@ For an installation or startup issue, include the command used, current director
 Before sharing a traceback, remove OAuth tokens, API keys, usernames, local directory names, and any résumé text. Include the exception type and relevant sanitized frames instead of a full private log.
 
 For a package issue, include the failing package name and pinned version from requirements.txt. Do not attach a full environment export if it contains private paths or tokens.
+
+For an upload issue, describe the file extension, approximate size, and encoding using a synthetic sample. Do not send a real résumé as a reproduction attachment.
