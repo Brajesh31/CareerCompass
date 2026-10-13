@@ -79,3 +79,7 @@ establish that the classifier is suitable for employment decisions.
 ### Credential remediation detail
 
 Credential rotation includes revoking the exposed provider key, checking its usage, changing the app to use a secret manager, and coordinating any history cleanup separately. Removing the visible string alone is insufficient.
+
+### Dataset decision
+
+Before further model work, record the résumé dataset source, rights, consent basis, and permitted uses. If these cannot be demonstrated, remove the dataset and sample content from future distribution and use synthetic or properly licensed material.
