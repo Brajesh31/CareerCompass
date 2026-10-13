@@ -79,3 +79,11 @@ Open an issue with reproduction steps, expected and observed behavior, Python
 and package versions, and sanitized logs. Use synthetic input. Do not attach
 résumés, personal data, tokens, client secrets, or the exposed API-key value.
 For vulnerabilities, use the private process in [SECURITY.md](../SECURITY.md).
+## Additional diagnostic cases
+
+### App fails to find local files
+
+Run Streamlit from the repository root so relative paths to the model files
+resolve as expected. Confirm that clf.pkl and tfidf.pkl are present in the
+deployment checkout and that the published branch includes the intended
+artifacts. Do not replace them with files from an untrusted source.
