@@ -105,3 +105,5 @@ Community Cloud lets the deployer choose a Python version during app creation. T
 The deployment source includes the tracked CSV, notebook, and model artifacts. A hosted build receives repository content; review whether each file belongs in a deployable source tree and whether any data should be removed from public distribution.
 
 A public GitHub repository already exposes tracked files independently of the running app. Deployment access controls do not make the dataset, notebook example, or source credential private.
+
+The Google OAuth button is a gate in the UI, but the app does not document identity-based permissions or a durable user model. Do not treat the presence of a sign-in screen as a complete privacy or authorization design.
