@@ -99,3 +99,9 @@ The app maintains its own integer-to-category mapping, while the notebook
 derives label order with LabelEncoder. Those mappings differ for class IDs
 10–13. Compare the saved classifier labels, notebook encoding, and app mapping
 before relying on any category output.
+### PDF upload produces unreadable output
+
+The current implementation decodes uploaded bytes as text; it does not extract
+PDF content. The file chooser accepting a PDF extension does not mean PDF
+parsing is supported. Use a synthetic plain-text file for local checks and do
+not submit a real résumé.
