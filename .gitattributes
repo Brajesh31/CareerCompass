@@ -29,3 +29,4 @@
 /requirements.txt text eol=lf
 *.sh text eol=lf
 *.toml text eol=lf
+*.svg text eol=lf
