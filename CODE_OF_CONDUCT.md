@@ -85,3 +85,7 @@ Do not use project discussions to promote discriminatory selection criteria or c
 ### Project representation
 
 When speaking on behalf of Career Compass, describe the classifier as experimental and communicate its limitations. Do not claim that the project has validated privacy or fairness controls that are not implemented.
+
+### Reporting details
+
+A private conduct report may identify the relevant public thread, describe the behavior and impact, and state what resolution is requested. Avoid forwarding sensitive personal data unless it is necessary and a private channel is confirmed.
