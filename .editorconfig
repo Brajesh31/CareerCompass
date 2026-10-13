@@ -40,3 +40,6 @@ trim_trailing_whitespace = false
 
 [requirements.txt]
 indent_size = 4
+
+[.gitignore]
+indent_size = 2
