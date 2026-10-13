@@ -87,3 +87,7 @@ Before further model work, record the résumé dataset source, rights, consent b
 ### Label integrity
 
 Persist the encoder with the classifier and derive output labels from the trained class list. Add a consistency check that covers every class ID, including the current mismatch at IDs 10–13.
+
+### File-format decision
+
+Choose either a tested PDF parser with file-size and content validation or a text-only interface. Do not advertise a file type merely because the uploader accepts its extension.
