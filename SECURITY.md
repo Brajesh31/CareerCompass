@@ -66,3 +66,7 @@ These are repository observations, not a complete security audit:
 The app is a prototype and is not a security or privacy certification. For
 project data flow, see [docs/database.md](docs/database.md); for deployment,
 see [docs/deployment.md](docs/deployment.md).
+
+### Exposed job-search credential
+
+Because the API credential is present in public source, request revocation or rotation from its provider before further use. Check provider usage and billing history for unexpected activity without copying the credential into a report.
