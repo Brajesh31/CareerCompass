@@ -117,3 +117,7 @@ Treat all job-provider fields as untrusted. Render text safely, validate require
 ### External data flow
 
 The current job-search request is based on a predicted category and a fixed geography value. If a change sends additional résumé content, explain the purpose, provider, retention, and user notice before implementation.
+
+### Dependency updates
+
+The pinned requirements include a broad package snapshot. For dependency changes, state why the package is needed, review its license and security status, and check compatibility with the serialized model artifacts.
