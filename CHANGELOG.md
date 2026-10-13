@@ -47,3 +47,5 @@ They do not certify model accuracy, privacy, security, or data rights.
 - The CSV labels are imbalanced, with category counts ranging from 20 to 84 examples in the inspected snapshot.
 
 - The job lookup uses the predicted category and a fixed geography value; the current implementation does not compare listings with the uploaded résumé.
+
+- Provider job-position text is interpolated into markup using unsafe HTML rendering, and the request has no explicit timeout.
