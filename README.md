@@ -165,3 +165,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 - [Database and data handling](docs/database.md): what the app processes and what it does not persist.
 
 - [Troubleshooting](docs/troubleshooting.md): common startup, upload, model, and provider failures.
+
+- [FAQ](docs/faq.md): common questions about categories, privacy, and model limits.
