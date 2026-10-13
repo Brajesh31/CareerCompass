@@ -51,3 +51,5 @@ They do not certify model accuracy, privacy, security, or data rights.
 - Provider job-position text is interpolated into markup using unsafe HTML rendering, and the request has no explicit timeout.
 
 - The app reads Google OAuth values from environment variables, but its redirect URI is fixed in source and the job-search credential is not configuration-driven.
+
+- No deployment manifest, database, public app API, CI workflow, or documented automated test suite exists in the reviewed repository state.
