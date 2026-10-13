@@ -41,3 +41,5 @@ They do not certify model accuracy, privacy, security, or data rights.
 - OAuth uses Google authorization and token endpoints, requests openid email profile, and stores the returned value in Streamlit session state.
 
 - The app calls NLTK download functions during script execution even though the current prediction path does not use those resources.
+
+- The notebook trains several classifiers in a loop and saves the final loop classifier and TF-IDF vectorizer; it does not save the LabelEncoder.
