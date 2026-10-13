@@ -73,3 +73,11 @@ file parsing, authentication, authorization, rate limits, error behavior,
 logging/retention, and credential management. Use synthetic data in examples.
 Any API returning model output must clearly state that the classifier is
 unvalidated and not suitable for hiring or other consequential decisions.
+## Additional implementation guidance
+
+### Streamlit interaction is the current interface
+
+The supported user interaction is the Streamlit page and its session state. The
+repository does not register application-owned REST routes or define a stable
+JSON contract. Streamlit's own internal transport endpoints are framework
+details and should not be treated as public project APIs.
