@@ -90,3 +90,5 @@ For changes to clean_resume, use fictional edge-case strings that include URLs, 
 For a label-map change, compare all 25 integer classes against the encoder classes and include assertions for every mapping instead of checking only one prediction.
 
 For training changes, split first, fit vectorization only on training text, and retain the exact split and seed so reported metrics can be reproduced.
+
+For OAuth changes, mock authorization/token responses in development checks; do not rely on a shared production client or store tokens in fixtures.
