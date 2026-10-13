@@ -120,3 +120,9 @@ Review Streamlit hosting logs, OAuth provider records, network diagnostics,
 and job-search provider logs for access, contents, retention, and deletion
 controls. Configure redaction so tokens, personal identifiers, filenames, and
 résumé text are not captured in routine operational logs.
+### Define retention before adding storage
+
+Any future database or cache needs a written purpose, fields, access roles,
+encryption approach, retention period, deletion path, backup lifecycle, and
+incident process. Make deletion observable and test it across primary records,
+derived data, and backups before promising users that their data is removed.
