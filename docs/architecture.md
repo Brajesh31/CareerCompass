@@ -105,3 +105,7 @@ The uploader reads the entire file into memory. UTF-8 decoding is attempted firs
 ### Preprocessing boundaries
 
 clean_resume applies substitutions before TF-IDF. It removes the literal strings RT and cc without word-boundary checks, which can alter unrelated words as well as common résumé markers.
+
+### Prediction and presentation
+
+The vectorizer and classifier run in the Streamlit process. The integer prediction is translated by a static dictionary; the label encoder is not loaded at inference time, so the dictionary can drift from model classes.
