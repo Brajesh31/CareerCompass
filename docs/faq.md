@@ -88,3 +88,7 @@ text only.
 ## What training data is included?
 
 The tracked CSV contains 962 résumé text rows assigned to 25 categories. Category sizes vary, and the repository does not document where the content came from, how consent was obtained, or whether redistribution is permitted. Do not assume that inclusion in Git makes the data free to reuse.
+
+## Which model is stored in clf.pkl?
+
+The notebook iterates through several classifiers and saves the final loop value as clf.pkl; from the notebook's declared order, that final classifier is the one-vs-rest SVM. The notebook does not save a label encoder alongside it, which contributes to the app's separate, mismatched manual label map.
