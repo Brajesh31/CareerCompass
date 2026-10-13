@@ -75,3 +75,7 @@ Open an issue with the user need, data sources and licenses, privacy/security
 impact, model-evaluation plan, and maintenance cost. See
 [CONTRIBUTING.md](CONTRIBUTING.md). Progress on this roadmap does not by itself
 establish that the classifier is suitable for employment decisions.
+
+### Credential remediation detail
+
+Credential rotation includes revoking the exposed provider key, checking its usage, changing the app to use a secret manager, and coordinating any history cleanup separately. Removing the visible string alone is insufficient.
