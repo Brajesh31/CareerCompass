@@ -112,3 +112,7 @@ The app requests openid, email, and profile scopes, but the current application 
 ## Why does the app need internet access at startup?
 
 The script calls NLTK download functions for tokenizer and stop-word data, and it loads remote assets and OAuth configuration. It also calls the job-search provider after a prediction. These network operations can fail independently of the local model.
+
+## Can I disable external job lookup while testing?
+
+There is no configuration switch for disabling the lookup in the current app: a successful prediction immediately calls the external provider. A safe offline development mode would require a code change that injects or mocks the provider call.
