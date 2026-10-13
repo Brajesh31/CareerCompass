@@ -93,3 +93,7 @@ A private conduct report may identify the relevant public thread, describe the b
 ### Review and moderation
 
 The maintainer may ask involved participants for context, remove sensitive material, or limit interaction while reviewing a report. Review decisions depend on severity, recurrence, and the safety of affected people.
+
+### Relationship to other policies
+
+This Code covers participation and behavior. It does not replace the private vulnerability process in SECURITY.md or the data and privacy cautions in README.md and docs/database.md.
