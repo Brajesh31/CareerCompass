@@ -153,3 +153,5 @@ for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
 ## Documentation map
 
 - [Architecture](docs/architecture.md): components, inference flow, and limitations.
+
+- [Installation](docs/installation.md): Python environment, OAuth setup, and local run instructions.
