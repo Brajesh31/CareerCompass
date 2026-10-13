@@ -21,3 +21,4 @@
 *.pdf binary
 *.png binary
 *.webp binary
+/.env.example text eol=lf
