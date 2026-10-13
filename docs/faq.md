@@ -100,3 +100,7 @@ The notebook calculates evaluation scores, but its TF-IDF vectorizer is fitted t
 ## What does text cleaning change?
 
 The cleaner removes URLs, every occurrence of the strings RT or cc, hashtags, mentions, punctuation, non-ASCII characters, and repeated whitespace. These broad substitutions may remove meaningful words, names, abbreviations, or technical details and can change predictions.
+
+## Are job listings tailored to my qualifications?
+
+No. The app asks the classifier for one category and searches listings using that category plus a fixed geographic identifier. It does not compare each listing with the résumé or assess the person's qualifications.
