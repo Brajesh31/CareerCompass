@@ -116,3 +116,7 @@ The script calls NLTK download functions for tokenizer and stop-word data, and i
 ## Can I disable external job lookup while testing?
 
 There is no configuration switch for disabling the lookup in the current app: a successful prediction immediately calls the external provider. A safe offline development mode would require a code change that injects or mocks the provider call.
+
+## Is the repository ready for public hosting?
+
+Not with real résumé uploads. Rotate the exposed job-search credential, move secrets into supported configuration, establish data rights and privacy controls, fix the label mapping and unsafe HTML output, and validate the model and dependency/runtime compatibility first. See deployment.md.
