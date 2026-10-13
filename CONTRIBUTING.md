@@ -105,3 +105,7 @@ Treat the encoder and category names as one artifact. The current notebook's Lab
 ### Upload format changes
 
 If adding or changing file support, validate file size and content, not only its extension. Document parser behavior, malformed-input handling, and whether extracted text or files are sent to any third party.
+
+### OAuth changes
+
+For OAuth work, document the redirect URI for each environment, token handling, session lifetime, required scopes, and sign-out/revocation behavior. Do not copy client secrets or token payloads into logs or examples.
