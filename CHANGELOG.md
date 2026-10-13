@@ -39,3 +39,5 @@ They do not certify model accuracy, privacy, security, or data rights.
 - The active page is app.py; session_state.py is a legacy helper that the page does not import.
 
 - OAuth uses Google authorization and token endpoints, requests openid email profile, and stores the returned value in Streamlit session state.
+
+- The app calls NLTK download functions during script execution even though the current prediction path does not use those resources.
