@@ -109,3 +109,7 @@ If adding or changing file support, validate file size and content, not only its
 ### OAuth changes
 
 For OAuth work, document the redirect URI for each environment, token handling, session lifetime, required scopes, and sign-out/revocation behavior. Do not copy client secrets or token payloads into logs or examples.
+
+### Provider response rendering
+
+Treat all job-provider fields as untrusted. Render text safely, validate required fields and types, distinguish an empty result from provider failure, and set finite network timeouts.
