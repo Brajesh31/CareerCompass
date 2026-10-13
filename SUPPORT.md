@@ -54,3 +54,5 @@ Before sharing a traceback, remove OAuth tokens, API keys, usernames, local dire
 For a package issue, include the failing package name and pinned version from requirements.txt. Do not attach a full environment export if it contains private paths or tokens.
 
 For an upload issue, describe the file extension, approximate size, and encoding using a synthetic sample. Do not send a real résumé as a reproduction attachment.
+
+For an OAuth issue, report whether the configured redirect matches the callback registered with Google. Never include the client secret, authorization code, or token.
