@@ -120,3 +120,9 @@ Escape or render provider-supplied job titles and other text using safe text
 components. Do not interpolate remote values into HTML with unsafe rendering.
 Validate links before making them clickable, and use only expected URL schemes
 such as HTTPS.
+### Protect uploaded content
+
+Do not put résumé text, filenames containing personal details, OAuth tokens,
+or raw uploaded bytes in telemetry, issue reports, or example requests.
+Production diagnostics should use request identifiers and sanitized error
+categories instead of personal content.
