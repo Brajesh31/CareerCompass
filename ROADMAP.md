@@ -107,3 +107,7 @@ Review redirect URIs, state validation, scopes, token expiration, sign-out, revo
 ### Testability
 
 Separate preprocessing, inference, and provider access from Streamlit rendering so each can be reviewed with synthetic fixtures and mocked network responses.
+
+### Release criteria
+
+A future release should identify its supported Python and package versions, model/data provenance, validated behavior, privacy controls, and known limitations. Creating a release does not authorize employment-decision use.
