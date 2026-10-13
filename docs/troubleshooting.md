@@ -129,3 +129,10 @@ The current outbound job-search request has no explicit timeout. A slow
 provider can therefore delay the page. Avoid repeatedly refreshing against a
 failing service; add a finite timeout and a bounded retry policy as a code
 change before relying on the integration.
+### Report with safe diagnostic details
+
+Include the operating system, Python version, dependency versions, command
+used, a minimal reproduction with synthetic text, and sanitized error output.
+Remove names, contact details, résumé text, OAuth values, access tokens, and
+provider credentials. Use the private reporting route in SECURITY.md for a
+suspected vulnerability.
