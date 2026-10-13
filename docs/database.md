@@ -73,3 +73,11 @@ access controls, encryption, retention, deletion, backups, incident response,
 and applicable privacy/legal review. Update the architecture and user notice
 before enabling collection. Keep model prediction possible without storing
 identifying data where practical.
+## Data governance checkpoints
+
+### Keep the no-database description precise
+
+The application does not define a database connection, schema, migration, or
+repository-managed persistence layer. This does not establish that every
+deployment component is storage-free: identity providers, the hosting platform,
+and external job-search services have separate handling and retention rules.
