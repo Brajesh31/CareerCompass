@@ -73,3 +73,7 @@ It is acceptable to criticize the model, dataset, or its use. Keep that criticis
 ### Personal information
 
 Do not post a real résumé, names, email addresses, phone numbers, or other identifying details as examples. Replace them with fictional data before sharing.
+
+### Credentials and private material
+
+Do not publish API keys, OAuth tokens, private messages, confidential logs, or deployment secrets. If any are exposed, remove public copies where possible and report privately so the credential can be revoked.
