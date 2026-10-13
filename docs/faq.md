@@ -104,3 +104,7 @@ The cleaner removes URLs, every occurrence of the strings RT or cc, hashtags, me
 ## Are job listings tailored to my qualifications?
 
 No. The app asks the classifier for one category and searches listings using that category plus a fixed geographic identifier. It does not compare each listing with the résumé or assess the person's qualifications.
+
+## Does Google sign-in personalize recommendations?
+
+The app requests openid, email, and profile scopes, but the current application uses the presence of an OAuth token as a gate before showing the upload page. It does not document a user profile database or a personalized recommendation system.
