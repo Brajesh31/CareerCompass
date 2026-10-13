@@ -109,3 +109,7 @@ clean_resume applies substitutions before TF-IDF. It removes the literal strings
 ### Prediction and presentation
 
 The vectorizer and classifier run in the Streamlit process. The integer prediction is translated by a static dictionary; the label encoder is not loaded at inference time, so the dictionary can drift from model classes.
+
+### Job request shape
+
+The external request sends a category field and fixed location/page parameters. It is a role search, not a semantic similarity comparison between the uploaded document and each listing.
