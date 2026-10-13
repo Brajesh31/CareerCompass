@@ -101,3 +101,7 @@ When revising training code, record the exact data version, class distribution, 
 ### Class labels
 
 Treat the encoder and category names as one artifact. The current notebook's LabelEncoder and app.py's manual mapping disagree for IDs 10–13. A proposed fix should verify every label against the trained model rather than relying on the displayed category alone.
+
+### Upload format changes
+
+If adding or changing file support, validate file size and content, not only its extension. Document parser behavior, malformed-input handling, and whether extracted text or files are sent to any third party.
