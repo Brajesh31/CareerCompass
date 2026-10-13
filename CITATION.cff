@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: >-
+  If you use or adapt the Career Compass source code, please cite this
+  repository and identify the version or commit used. The bundled dataset and
+  model artifacts have separate provenance and licensing questions; citation
+  metadata does not establish permission to reuse them.
+title: Career Compass
+type: software
+authors:
+  - family-names: Kumar
+    given-names: Brajesh
+    alias: brajesh31
+repository-code: 'https://github.com/Brajesh31/CareerCompass'
+license: MIT
+keywords:
+  - Streamlit
+  - resume classification
+  - job recommendations
+  - machine learning prototype
