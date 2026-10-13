@@ -114,3 +114,9 @@ Give external requests a finite timeout and a deliberate retry policy. Retries
 should be limited to transient failures and should not amplify rate limits.
 Avoid logging full request URLs when they contain credentials; redact tokens
 and query parameters in diagnostics.
+### Render external text safely
+
+Escape or render provider-supplied job titles and other text using safe text
+components. Do not interpolate remote values into HTML with unsafe rendering.
+Validate links before making them clickable, and use only expected URL schemes
+such as HTTPS.
