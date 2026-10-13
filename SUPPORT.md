@@ -48,3 +48,5 @@ Review [docs/database.md](docs/database.md) before deploying or sharing data.
 ## Diagnostic checklist
 
 For an installation or startup issue, include the command used, current directory, Python version, operating system, and whether the failure occurs during dependency installation or app startup.
+
+Before sharing a traceback, remove OAuth tokens, API keys, usernames, local directory names, and any résumé text. Include the exception type and relevant sanitized frames instead of a full private log.
