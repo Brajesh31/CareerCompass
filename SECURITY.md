@@ -90,3 +90,7 @@ Treat clf.pkl and tfidf.pkl as executable inputs during deserialization. Restric
 ### Outbound request behavior
 
 The job-search request has no explicit timeout or retry bounds. Network calls should use finite timeouts, validate TLS, handle provider status codes distinctly, and avoid exposing credentials in logs or exception output.
+
+### OAuth session review
+
+Inspect the OAuth component's callback, state validation, token payload handling, and session lifetime against the installed library version. Avoid treating a token's mere presence as a complete identity or authorization policy.
