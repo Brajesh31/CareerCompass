@@ -70,3 +70,7 @@ see [docs/deployment.md](docs/deployment.md).
 ### Exposed job-search credential
 
 Because the API credential is present in public source, request revocation or rotation from its provider before further use. Check provider usage and billing history for unexpected activity without copying the credential into a report.
+
+### Git history
+
+Removing a credential from the current file does not revoke it and does not remove old commits. Rotate first. History rewriting may be considered only after collaborators are coordinated and the repository owner explicitly authorizes a force push.
