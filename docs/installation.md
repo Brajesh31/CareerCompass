@@ -123,3 +123,5 @@ Google OAuth requires valid credentials and a callback registered for the config
 Streamlit Community Cloud secrets use the Streamlit secret mechanism, while the current OAuth code reads os.getenv. Update that integration before expecting hosted secrets to populate the current environment lookup.
 
 Use only model artifacts produced from a trusted source and compatible with the installed scikit-learn version. The repository does not publish an artifact build manifest.
+
+Although the uploader lists PDF, only decoded text is meaningful to the current pipeline. Use the text format for synthetic local examples and avoid uploading personal data.
