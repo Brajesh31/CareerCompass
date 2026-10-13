@@ -149,3 +149,7 @@ help, see [SUPPORT.md](SUPPORT.md); for conduct expectations, see
 the MIT License in [LICENSE](LICENSE), subject to rights in third-party data,
 models, libraries, and assets being reviewed separately. See [CITATION.cff](CITATION.cff)
 for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
+
+## Documentation map
+
+- [Architecture](docs/architecture.md): components, inference flow, and limitations.
