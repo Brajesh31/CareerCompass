@@ -65,3 +65,7 @@ Covenant community-code-of-conduct model. For project expectations, see
 ### Technical disagreement
 
 Disagree with proposals by explaining the specific behavior, evidence, and tradeoff. Avoid sarcasm, personal judgments, or assumptions about a contributor's motives.
+
+### Discussions of model impacts
+
+It is acceptable to criticize the model, dataset, or its use. Keep that criticism evidence-based and do not make derogatory claims about people or groups represented in data.
