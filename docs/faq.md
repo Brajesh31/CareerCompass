@@ -92,3 +92,7 @@ The tracked CSV contains 962 résumé text rows assigned to 25 categories. Categ
 ## Which model is stored in clf.pkl?
 
 The notebook iterates through several classifiers and saves the final loop value as clf.pkl; from the notebook's declared order, that final classifier is the one-vs-rest SVM. The notebook does not save a label encoder alongside it, which contributes to the app's separate, mismatched manual label map.
+
+## Has the model's accuracy been established?
+
+The notebook calculates evaluation scores, but its TF-IDF vectorizer is fitted to all résumé rows before the train/test split. This leaks information from the eventual test partition into preprocessing. The repository does not provide a clean, independently reproducible evaluation suitable for real-world use.
