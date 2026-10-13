@@ -89,3 +89,7 @@ When speaking on behalf of Career Compass, describe the classifier as experiment
 ### Reporting details
 
 A private conduct report may identify the relevant public thread, describe the behavior and impact, and state what resolution is requested. Avoid forwarding sensitive personal data unless it is necessary and a private channel is confirmed.
+
+### Review and moderation
+
+The maintainer may ask involved participants for context, remove sensitive material, or limit interaction while reviewing a report. Review decisions depend on severity, recurrence, and the safety of affected people.
