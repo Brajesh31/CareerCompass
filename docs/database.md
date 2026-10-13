@@ -107,3 +107,10 @@ materials do not establish participant consent, legal basis, or redistribution
 rights. Resolve provenance and permitted uses before redistributing data,
 training new artifacts, or publishing examples derived from individual
 records.
+### Limit provider data sharing
+
+The job-search integration uses the predicted category and search parameters
+rather than intentionally forwarding the résumé text. Verify the exact
+outbound request and provider contract after code changes. Do not claim that
+no personal data is shared until all identifiers, logs, and deployment
+integrations have been reviewed.
