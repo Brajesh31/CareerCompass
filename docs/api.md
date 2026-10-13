@@ -108,3 +108,9 @@ parsing, top-level shape, and the type and presence of every displayed field.
 Handle an empty result separately from network, authentication, quota, and
 schema failures so users can understand what happened without exposing
 secrets or stack traces.
+### Bound remote calls
+
+Give external requests a finite timeout and a deliberate retry policy. Retries
+should be limited to transient failures and should not amplify rate limits.
+Avoid logging full request URLs when they contain credentials; redact tokens
+and query parameters in diagnostics.
