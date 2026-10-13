@@ -39,3 +39,7 @@ The repository does not document the provenance, training-data permissions, or s
 ### Third-party services and data
 
 Google OAuth, ScrapingDog job data, and any information returned by those providers remain subject to their respective terms. This repository license does not grant rights to those services or their data.
+
+### Dependencies
+
+Python packages listed in requirements.txt are third-party works and retain their own licenses and notices. Review each dependency's license before redistribution.
