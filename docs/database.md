@@ -87,3 +87,10 @@ Streamlit session state is used for OAuth flow and signed-in user information.
 Keep session values limited to what the current screen needs, avoid storing
 résumé contents or derived personal details there, and clear sensitive values
 when the session ends where the framework permits.
+### Treat uploads as sensitive in memory
+
+The active prediction flow reads the uploaded file into application memory for
+decoding and inference. Avoid copying the content into logs, exception text,
+analytics events, caches, or debugging output. A lack of an application
+database is not a guarantee about temporary memory, platform handling, or
+crash diagnostics.
