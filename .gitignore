@@ -37,3 +37,4 @@ Thumbs.db
 .tox/
 .nox/
 .hypothesis/
+*.log
