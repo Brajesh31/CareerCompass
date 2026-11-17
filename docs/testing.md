@@ -1,43 +1,37 @@
 # 🧪 Testing Strategy
 
-## Current state
+## Current coverage
 
-No automated application test suite was present in the reviewed repository before this documentation enhancement. The new CI checks are intentionally limited to syntax and documentation hygiene. They do not validate model quality, data rights, security controls, or production readiness.
+| Area | Implemented check | Not covered |
+|---|---|---|
+| Text cleaning | Isolated regression tests for `clean_resume` | All edge cases and semantic correctness |
+| Documentation links | Local relative Markdown link check | Remote links and anchor IDs |
+| SVG files | XML well-formedness | Browser rendering and visual quality |
+| Python syntax | compileall | Runtime behavior of all components |
+| Model pipeline | Not yet automated | Accuracy, fairness, calibration, leakage remediation |
+| OAuth/provider | Not yet automated | Live provider calls are deliberately not made |
+| Upload/PDF | Not yet automated | PDF structure parsing is not implemented |
+| Accessibility | Manual checklist | Formal conformance testing |
 
-## Test layers to implement
-
-| Layer | Coverage target |
-|---|---|
-| Unit | Text cleaning, input validation, category decoding, configuration |
-| Model contract | Vectorizer/classifier compatibility, known class IDs, deterministic output |
-| Integration | OAuth responses and job-provider success/failure with mocks |
-| Upload | Empty, oversized, malformed, extension mismatch, encoding and PDF handling |
-| Security | HTML injection, secret leakage, malicious file and pickle provenance controls |
-| Accessibility | Keyboard flow, labels, focus, contrast, screen-reader semantics |
-| Model evaluation | Leakage-free split, per-class metrics, robustness and bias review |
-
-## Synthetic test inputs
-
-Use fictional text only. Include URLs, hashtags, punctuation, Unicode, misleading substrings such as `RT` and `cc` inside ordinary words, empty content, very long content, and script-like provider strings.
-
-## External calls
-
-Mock OAuth token exchanges and the job provider. Tests must not call the live provider or use production credentials. Cover timeout, non-success status, malformed JSON, missing fields, empty jobs, and unexpected response types.
-
-## Model integrity
-
-A test should assert that the persisted label encoder and estimator agree for every class. The current application hand-written map is known to be inconsistent; do not bless current output by snapshotting the incorrect values.
-
-## Commands
+## Run locally
 
 ```bash
-python -m compileall -q app.py session_state.py
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python scripts/check_repository.py
+python -m compileall -q app.py session_state.py scripts
 ```
 
-A future test suite can be run with:
+The unit test extracts only the pure `clean_resume` function from the Python AST. It does not import the full Streamlit script, so it avoids model deserialization, NLTK downloads, OAuth setup, and provider requests during test collection.
 
-```bash
-python -m pytest
-```
+## Next test layers
+1. Upload validation: empty, oversized, malformed, and extension/content mismatch.
+2. PDF parsing: supported documents, damaged files, parser limits, and extraction quality if PDF support is retained.
+3. Label contract: every estimator class ID agrees with the persisted encoder.
+4. Model evaluation: split before fitting TF-IDF and report per-class metrics.
+5. Provider adapter: mocked success, empty response, invalid JSON, timeout, rate limit, and missing fields.
+6. OAuth lifecycle: mocked token exchange, bad state, expiration, and sign-out.
+7. Security: unsafe provider strings, secrets, file payloads, and artifact provenance.
+8. Accessibility: keyboard, screen reader, focus, contrast, zoom, and responsive layouts.
 
-The latter command is a target, not a claim that tests currently exist or pass.
+Use synthetic résumé content only. A passing test suite is not model validation or approval for employment-related decisions.

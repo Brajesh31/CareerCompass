@@ -1,0 +1,34 @@
+name: "🧠 Data or model change"
+description: "Propose a dataset, label, preprocessing, or model change"
+title: "[Model/Data]: "
+labels: ["model", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach real résumés or datasets containing personal information. Provide provenance and license details instead."
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Source, license, consent, retrieval date, and permitted purpose
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: Evaluation and leakage-control plan
+    validations:
+      required: true
+  - type: checkboxes
+    id: safeguards
+    attributes:
+      label: Safeguards
+      options:
+        - label: This does not enable hiring, screening, ranking, or selection decisions
+        - label: No real personal data is being uploaded
+        - label: Privacy, security, and impact implications are reviewed

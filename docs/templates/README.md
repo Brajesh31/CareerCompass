@@ -1,18 +1,18 @@
-# 🧰 Project Templates
+undefined
 
-Use these templates to make changes reviewable and repeatable. Remove instructional prompts before final submission.
+## Additional templates
 
-| Template | Use |
-|---|---|
-| [ADR](adr-template.md) | Record an architectural decision |
-| [Model change record](model-change-record-template.md) | Track model/data/preprocessing changes |
-| [Data source review](data-source-review-template.md) | Establish provenance and usage rights |
-| [Security review](security-review-template.md) | Threat and mitigation review |
-| [Privacy impact review](privacy-impact-template.md) | Assess personal-data changes |
-| [Accessibility audit](accessibility-audit-template.md) | Capture manual/automated a11y tests |
-| [Test report](test-report-template.md) | Record validation evidence |
-| [Release readiness](release-readiness-checklist.md) | Verify release blockers |
-| [Incident report](incident-report-template.md) | Document security or privacy incidents |
-| [Issue triage](issue-triage-template.md) | Prioritize incoming issues |
-| [PR review](pull-request-review-template.md) | Review code and docs changes |
-| [Change proposal](change-proposal-template.md) | Scope a larger improvement |
+- [Dataset change proposal](dataset-change-template.md)
+- [Experiment plan](experiment-plan-template.md)
+- [Model evaluation report](model-evaluation-report-template.md)
+- [Bias and impact assessment](bias-impact-assessment-template.md)
+- [Dependency update review](dependency-update-template.md)
+- [Deployment checklist](deployment-checklist-template.md)
+- [Rollback plan](rollback-plan-template.md)
+- [External provider review](provider-review-template.md)
+- [Bug reproduction record](bug-reproduction-template.md)
+- [Performance benchmark](performance-benchmark-template.md)
+- [Usability test notes](usability-test-template.md)
+- [Notebook review](notebook-review-template.md)
+- [Residual risk acceptance](risk-acceptance-template.md)
+- [User feedback synthesis](user-feedback-template.md)

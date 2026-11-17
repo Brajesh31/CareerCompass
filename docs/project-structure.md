@@ -55,3 +55,52 @@ tests/
 ├── integration/
 └── model/
 ```
+
+
+## Additional quality infrastructure
+
+```text
+.github/
+├── DISCUSSION_TEMPLATE/
+├── ISSUE_TEMPLATE/
+├── workflows/
+└── dependabot.yml
+scripts/
+└── check_repository.py
+tests/
+├── README.md
+└── test_clean_resume.py
+docs/
+├── assets/                 SVG architecture and process diagrams
+├── decisions/              Architecture decision records
+├── templates/              Reusable engineering/review templates
+└── *.md                   Model, data, operations, security and UX guides
+requirements-dev.txt
+pytest.ini
+GOVERNANCE.md
+DISCLAIMER.md
+```
+
+The tests extract the pure cleaning function from app.py's syntax tree rather than importing the application and triggering model loading or network downloads. The proposed modular source tree earlier in this document remains a future refactor, not current implementation.
+
+
+## Quality infrastructure added
+
+```text
+.github/
+├── DISCUSSION_TEMPLATE/
+├── ISSUE_TEMPLATE/
+├── workflows/
+└── dependabot.yml
+scripts/
+└── check_repository.py
+tests/
+├── README.md
+└── test_clean_resume.py
+requirements-dev.txt
+pytest.ini
+GOVERNANCE.md
+DISCLAIMER.md
+```
+
+The unit test extracts the pure text-cleaning helper's AST rather than importing app.py, which would trigger model loading and network-dependent setup. Proposed modular application folders remain future architecture, not implemented source.

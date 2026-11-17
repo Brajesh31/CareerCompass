@@ -71,7 +71,7 @@ page renders. For code changes, add tests using synthetic fixtures and mocked
 OAuth/job-search responses, then describe the checks performed. Model changes
 also require a reproducible data split, per-class metrics, and limitations.
 
-Before opening a pull request, inspect the diff for personal data and secrets,
+Before opening a pull request, run `python -m pip install -r requirements-dev.txt`, `python -m pytest -q`, and `python scripts/check_repository.py`. Then inspect the diff for personal data and secrets,
 check that category names match the training labels, and update the affected
 guides. Do not include live service credentials or real résumé screenshots in
 review materials.

@@ -1,0 +1,24 @@
+name: "♿ Accessibility issue"
+description: "Report an accessibility barrier"
+title: "[Accessibility]: "
+labels: ["accessibility"]
+body:
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Describe the barrier
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, device, and assistive technology
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Do not include personal or sensitive information.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected accessible behavior

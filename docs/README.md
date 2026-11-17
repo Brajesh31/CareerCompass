@@ -29,3 +29,32 @@ This directory is the technical handbook for the current repository. It describe
 ## Current system boundary
 
 Career Compass is a Streamlit prototype. It loads trusted pickle artifacts, processes uploaded résumé-like text in memory, predicts a category, and makes an external job-search request. There is no project-owned database or documented public API. Important issues are listed in [known issues](known-issues.md).
+
+
+## Additional model, data, and operations guides
+
+- [Dataset card](dataset-card.md), [model training](model-training.md), [model risk assessment](model-risk-assessment.md), and [prediction guide](prediction-guide.md).
+- [External services](external-services.md), [data retention](data-retention.md), [monitoring](monitoring.md), and [backup/recovery](backup-recovery.md).
+- [UI/UX review](ui-ux-review.md), [error handling](error-handling.md), [dependency management](dependency-management.md), and [quality gates](quality-gates.md).
+- [Responsible use](responsible-use.md), [user journey](user-journey.md), [research notebook guide](research-notebook-guide.md), and [requirements inventory](requirements-inventory.md).
+- Root-level [governance](../GOVERNANCE.md) and [disclaimer](../DISCLAIMER.md).
+
+## Local validation commands
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python scripts/check_repository.py
+python -m compileall -q app.py session_state.py scripts
+```
+
+These checks verify only a limited set of code and repository hygiene properties. They do not establish model quality, data rights, or production security.
+
+
+## Additional model, data, and operational references
+
+- [Dataset card](dataset-card.md), [model training](model-training.md), [model risk assessment](model-risk-assessment.md), and [prediction guide](prediction-guide.md).
+- [External services](external-services.md), [data retention](data-retention.md), [monitoring](monitoring.md), and [backup/recovery](backup-recovery.md).
+- [UI/UX review](ui-ux-review.md), [error handling](error-handling.md), [dependency management](dependency-management.md), and [quality gates](quality-gates.md).
+- [Responsible use](responsible-use.md), [user journey](user-journey.md), [research notebook guide](research-notebook-guide.md), and [requirements inventory](requirements-inventory.md).
+- Root-level [governance](../GOVERNANCE.md) and [disclaimer](../DISCLAIMER.md).

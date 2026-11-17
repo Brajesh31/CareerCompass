@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Support and safe usage
-    url: https://github.com/Brajesh31/CareerCompass/blob/main/SUPPORT.md
-    about: Read support guidance before opening an issue.
+  - name: 🔐 Report a security vulnerability privately
+    url: https://github.com/Brajesh31/CareerCompass/security/advisories/new
+    about: Do not disclose credentials or vulnerabilities in public issues.
+  - name: 💬 General questions and support
+    url: https://github.com/Brajesh31/CareerCompass/discussions
+    about: Read SUPPORT.md and search discussions first.
+  - name: 📚 Documentation
+    url: https://github.com/Brajesh31/CareerCompass/tree/main/docs
+    about: Browse technical guides and templates.

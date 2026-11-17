@@ -267,6 +267,22 @@ For the complete validation strategy, use [docs/testing.md](docs/testing.md). Us
 | [Data governance](docs/data-governance.md) | Provenance, consent and retention |
 | [Privacy](docs/privacy.md) | Data-flow and privacy boundaries |
 | [Security review](docs/security-review.md) | Threats and mitigations |
+| [Dataset card](docs/dataset-card.md) | Dataset rights and provenance gaps |
+| [Model training](docs/model-training.md) | Training sequence and artifact lifecycle |
+| [Model risk assessment](docs/model-risk-assessment.md) | Model impacts and risk register |
+| [Prediction guide](docs/prediction-guide.md) | Cautious interpretation of outputs |
+| [External services](docs/external-services.md) | OAuth and provider integration boundaries |
+| [Data retention](docs/data-retention.md) | Retention and deletion requirements |
+| [Monitoring](docs/monitoring.md) | Privacy-safe operational signals |
+| [Backup and recovery](docs/backup-recovery.md) | Source and artifact recovery guidance |
+| [UI/UX review](docs/ui-ux-review.md) | Interface gaps and usability checklist |
+| [Error handling](docs/error-handling.md) | Error taxonomy and current failure behavior |
+| [Dependency management](docs/dependency-management.md) | Package hygiene and compatibility |
+| [Quality gates](docs/quality-gates.md) | CI coverage and limitations |
+| [Responsible use](docs/responsible-use.md) | Acceptable use and safeguards |
+| [User journey](docs/user-journey.md) | Current and proposed user flow |
+| [Notebook guide](docs/research-notebook-guide.md) | Safe notebook maintenance |
+| [Requirements inventory](docs/requirements-inventory.md) | Existing dependency snapshot |
 | [Testing](docs/testing.md) | Code, integration and model checks |
 | [Deployment](docs/deployment.md) | Hosting prerequisites |
 | [Operations runbook](docs/operations-runbook.md) | Incident response and shutdown |
@@ -276,7 +292,7 @@ For the complete validation strategy, use [docs/testing.md](docs/testing.md). Us
 | [Templates](docs/templates/README.md) | Reusable engineering templates |
 | [Architecture decisions](docs/decisions/README.md) | Decision records |
 
-## 🤝 Contributing
+## 🏛️ Governance and usage boundaries\n\nRead [GOVERNANCE.md](GOVERNANCE.md) for change review and release responsibility and [DISCLAIMER.md](DISCLAIMER.md) for project use restrictions. The repository also includes a dedicated test harness, repository checker, Dependabot, and CodeQL workflow. See [docs/quality-gates.md](docs/quality-gates.md) for what automation does and does not prove.\n\n## 🤝 Contributing
 
 Contributions should improve clarity, reproducibility, privacy, security, accessibility, and technical reliability. Do not add real résumés, real credentials, personal information, or unsupported claims of model accuracy.
 
