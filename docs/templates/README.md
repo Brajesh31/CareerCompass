@@ -16,3 +16,6 @@ undefined
 - [Notebook review](notebook-review-template.md)
 - [Residual risk acceptance](risk-acceptance-template.md)
 - [User feedback synthesis](user-feedback-template.md)
+
+
+- [Model artifact manifest](model-artifact-manifest-template.md) for pairing estimator, vectorizer, and encoder provenance.

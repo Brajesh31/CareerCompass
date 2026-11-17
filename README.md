@@ -283,6 +283,9 @@ For the complete validation strategy, use [docs/testing.md](docs/testing.md). Us
 | [User journey](docs/user-journey.md) | Current and proposed user flow |
 | [Notebook guide](docs/research-notebook-guide.md) | Safe notebook maintenance |
 | [Requirements inventory](docs/requirements-inventory.md) | Existing dependency snapshot |
+| [Label taxonomy](docs/label-taxonomy.md) | Current mapping and known class-order issue |
+| [Secret rotation](docs/secret-rotation-runbook.md) | Response to exposed provider credentials |
+| [Feature scope](docs/feature-scope.md) | Current and absent product capabilities |
 | [Testing](docs/testing.md) | Code, integration and model checks |
 | [Deployment](docs/deployment.md) | Hosting prerequisites |
 | [Operations runbook](docs/operations-runbook.md) | Incident response and shutdown |

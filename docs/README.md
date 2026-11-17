@@ -58,3 +58,8 @@ These checks verify only a limited set of code and repository hygiene properties
 - [UI/UX review](ui-ux-review.md), [error handling](error-handling.md), [dependency management](dependency-management.md), and [quality gates](quality-gates.md).
 - [Responsible use](responsible-use.md), [user journey](user-journey.md), [research notebook guide](research-notebook-guide.md), and [requirements inventory](requirements-inventory.md).
 - Root-level [governance](../GOVERNANCE.md) and [disclaimer](../DISCLAIMER.md).
+
+
+- [Current label taxonomy](label-taxonomy.md), which records the app's mapping with an explicit warning about encoder mismatch.
+- [Secret rotation runbook](secret-rotation-runbook.md) for the exposed provider credential.
+- [Feature scope](feature-scope.md) for current, absent, and unsupported product capabilities.

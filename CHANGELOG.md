@@ -4,7 +4,9 @@ This file records notable repository changes. The project has no documented
 tagged releases or versioning policy, so entries are grouped under
 `Unreleased` until maintainers establish releases.
 
-## Unreleased\n\n### Engineering infrastructure expansion (2026-11-17)\n\n- Added isolated pytest tests for the existing text-cleaning helper without importing the full Streamlit application.\n- Added a repository checker for relative Markdown links, required files, and SVG validity.\n- Added GitHub Actions for tests and CodeQL analysis, plus Dependabot updates.\n- Added dataset, training, model-risk, prediction, external-service, retention, monitoring, recovery, UI/UX, error-handling, dependency, quality-gate, responsible-use, user-journey, notebook, and requirements guides.\n- Added governance and disclaimer root documents.\n- Added reusable templates for dataset changes, experiments, model evaluation, impact review, provider review, deployment, rollback, benchmarking, usability, notebook review, risk acceptance, and feedback.
+## Unreleased\n\n### Engineering infrastructure expansion (2026-11-17)
+
+- Fixed the text-cleaning helper to remove leading and trailing whitespace after normalization; added regression coverage.\n\n- Added isolated pytest tests for the existing text-cleaning helper without importing the full Streamlit application.\n- Added a repository checker for relative Markdown links, required files, and SVG validity.\n- Added GitHub Actions for tests and CodeQL analysis, plus Dependabot updates.\n- Added dataset, training, model-risk, prediction, external-service, retention, monitoring, recovery, UI/UX, error-handling, dependency, quality-gate, responsible-use, user-journey, notebook, and requirements guides.\n- Added governance and disclaimer root documents.\n- Added reusable templates for dataset changes, experiments, model evaluation, impact review, provider review, deployment, rollback, benchmarking, usability, notebook review, risk acceptance, and feedback.
 
 ### Documentation and repository guidance
 
