@@ -297,3 +297,5 @@ The repository contains an MIT license. That license does not automatically cove
 ---
 
 <p align="center">Built as an educational machine-learning prototype. Treat predictions with caution, protect personal data, and verify every claim.</p>
+
+Last updated: 2026-11-17 09:58 UTC
