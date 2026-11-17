@@ -1,0 +1,18 @@
+title: "💡 Idea discussion"
+body:
+  - type: textarea
+    attributes:
+      label: Problem or opportunity
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Suggested approach
+  - type: checkboxes
+    attributes:
+      label: Potential impact
+      options:
+        - label: Privacy or personal-data impact
+        - label: Model or dataset impact
+        - label: Security impact
+        - label: Accessibility impact

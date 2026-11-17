@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and safe usage
+    url: https://github.com/Brajesh31/CareerCompass/blob/main/SUPPORT.md
+    about: Read support guidance before opening an issue.

@@ -1,85 +1,154 @@
-# Career Compass
+# 🧭 Career Compass
 
-Career Compass is a Streamlit prototype that classifies uploaded résumé text
-into one of 25 job categories and requests matching job listings from an
-external job-search service. The repository also contains a Jupyter notebook,
-a CSV of résumé examples, and serialized scikit-learn artifacts.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Streamlit-prototype-FF4B4B?logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Machine%20Learning-TF--IDF%20%2B%20Classifier-6C5CE7" alt="Machine learning">
+  <img src="https://img.shields.io/badge/Status-Experimental-orange" alt="Experimental">
+  <img src="https://img.shields.io/badge/Use%20in%20hiring-Not%20permitted-critical" alt="Not for hiring">
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="MIT license">
+</p>
 
-This is an experimental demonstration, not a hiring or career-advice system.
-Its training data, licensing, evaluation, bias characteristics, and category
-mapping have not been established to a standard suitable for employment
-decisions. Do not use its predictions to screen, rank, reject, or select job
-applicants, or as the basis for another consequential decision.
+<p align="center"><strong>A résumé-text classification and job-discovery prototype built with Streamlit and scikit-learn.</strong></p>
 
-## What the app currently does
+> [!CAUTION]
+> **Career Compass is an experimental educational prototype, not a validated career-advice, recruitment, or hiring system.** Do not use its predictions to screen, rank, accept, reject, or select applicants, or to make another consequential decision. Data provenance, consent, redistribution rights, model quality, class mapping, fairness, and privacy controls have not been established.
 
-1. Presents a Google OAuth sign-in button using credentials supplied through
-   `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` environment variables.
-2. Accepts a file named `.txt` or `.pdf` through Streamlit's upload control.
-3. Decodes the uploaded bytes as UTF-8, falling back to Latin-1, and cleans
-   portions of the resulting text.
-4. Transforms the text with `tfidf.pkl` and predicts a category with
-   `clf.pkl`.
-5. Requests job listings for the predicted category from ScrapingDog's
-   LinkedIn jobs endpoint and displays the returned results.
+## 📌 Contents
 
-The current upload path does not extract text from PDF structure. A PDF may be
-accepted by the control but produce meaningless text and an unreliable
-prediction. Text files are the only format that this implementation actually
-decodes as text.
+- [Overview](#-overview)
+- [What currently works](#-what-currently-works)
+- [How the application works](#-how-the-application-works)
+- [Technology](#-technology)
+- [Repository layout](#-repository-layout)
+- [Quick start](#-quick-start)
+- [Configuration](#-configuration)
+- [Data and model](#-data-and-model)
+- [Security and privacy](#-security-and-privacy)
+- [Known limitations and release blockers](#-known-limitations-and-release-blockers)
+- [Testing and quality](#-testing-and-quality)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [Roadmap](#-roadmap)
+- [License and attribution](#-license-and-attribution)
 
-The app maps model output IDs to category names in `app.py`. The notebook
-creates labels with scikit-learn's `LabelEncoder`, while the app maintains a
-separate hand-written mapping. The mapping for IDs 10–13 does not match the
-notebook's alphabetically encoded categories; outputs for those IDs can be
-misnamed. The model has not been independently validated for real-world use.
+## 🎯 Overview
 
-## Important security and privacy notes
+Career Compass accepts résumé-like text, transforms it with a stored TF-IDF vectorizer, predicts one of 25 job-category labels using a serialized scikit-learn classifier, and requests job listings for the predicted category from an external job-search service.
 
-- A third-party job-search API credential is embedded in the existing
-  application source. Treat it as exposed: revoke or rotate it with the
-  provider before using the integration, then move the replacement into a
-  secret manager and update the code to read it from configuration. Do not
-  copy credentials into issues, documentation, or new commits. Removing a
-  value from the latest source does not remove it from Git history.
-- The repository contains résumé text in a dataset and notebook example. These
-  files may include personal information, and the repository does not document
-  their provenance, consent, or redistribution rights. Review them before
-  redistributing or deploying the project.
-- The application loads `clf.pkl` and `tfidf.pkl` with Python `pickle`. Only
-  load model artifacts from a source you trust; unpickling untrusted files can
-  execute code.
-- Uploaded résumé text is processed by the Streamlit server. Matching job
-  lookups are sent to an external service. Do not submit real or confidential
-  résumés until the data flow, retention, access controls, and privacy terms
-  have been reviewed.
-- The consent text shown by the app is not a substitute for verified privacy
-  safeguards or a reviewed privacy notice.
+The repository also contains an exploratory Jupyter notebook, a CSV dataset, serialized model artifacts, a Streamlit interface, and a static HTML/CSS landing page. The implementation is best treated as a learning prototype for text preprocessing, traditional machine learning, Streamlit, OAuth integration, and external API consumption.
 
-See [SECURITY.md](SECURITY.md) for private vulnerability reporting and
-[docs/database.md](docs/database.md) for the current data-flow notes.
+### Product boundaries
 
-## Requirements
+| Capability | Current repository behavior |
+|---|---|
+| Sign-in | Google OAuth button using environment variables |
+| Resume upload | Streamlit upload control lists TXT and PDF |
+| Text extraction | Raw bytes decoded as UTF-8, then Latin-1 fallback |
+| Preprocessing | Regex-based cleaning in `clean_resume` |
+| Classification | Existing TF-IDF transformer and serialized classifier |
+| Job discovery | ScrapingDog LinkedIn jobs endpoint |
+| Persistence | No project-owned database or durable user profile store |
+| Public API | No project-owned REST or GraphQL API |
+| PDF parsing | Not implemented, extension acceptance is not PDF extraction |
+| Recommendation quality | Not independently validated |
 
-- Python 3 (the repository does not declare a supported minimum version).
-- The pinned Python packages in `requirements.txt`.
-- Google OAuth client credentials for sign-in. The redirect URI is currently
-  hard-coded in `app.py` to the published Streamlit app URL, so local OAuth
-  requires an appropriate code and provider configuration change.
-- A replacement ScrapingDog API key after the exposed credential has been
-  revoked or rotated and the source has been changed to use secret
-  configuration.
+## ✅ What currently works
 
-The application calls `nltk.download()` for tokenizer and stop-word data at
-startup, so the runtime needs network access to download those resources. The
-current prediction code does not otherwise use those downloads.
+The existing code provides a narrow end-to-end demonstration: OAuth-gated interface, upload control, text cleaning, vectorization, one predicted label, and a job-search request. This description is limited to behavior visible in the source. It does not imply production readiness or model validity.
 
-## Run locally
+The static `index.html` and `style.css` are a separate landing-page attempt. Their form flow is not a documented registration backend. `session_state.py` is a legacy Streamlit session-state helper and is not imported by the current `app.py`.
 
-Clone the repository, enter its root directory, and create an isolated
-environment.
+## 🔄 How the application works
 
-Windows PowerShell:
+![Career Compass application flow](docs/assets/application-flow.svg)
+
+```mermaid
+flowchart TD
+    A[Open Streamlit app] --> B[Google OAuth gate]
+    B -->|Token present| C[Upload TXT or PDF]
+    C --> D[Read bytes and decode as text]
+    D --> E[Regex text cleaning]
+    E --> F[TF-IDF transform]
+    F --> G[Serialized classifier prediction]
+    G --> H[Manual category ID mapping]
+    H --> I[External job-search request]
+    I --> J[Display returned job listings]
+    B -->|No token| K[Show consent text and sign-in]
+```
+
+The flow diagram describes the current code path, including known unsafe or incomplete steps. In particular, the upload path does not parse PDF structure, the category map is not aligned reliably with the notebook's label encoder, and the provider credential requires rotation.
+
+## 🧰 Technology
+
+| Area | Technology visible in repository |
+|---|---|
+| Application UI | Streamlit |
+| Language | Python |
+| Text features | scikit-learn TF-IDF |
+| Classifier | Serialized scikit-learn estimator |
+| Authentication | `streamlit-oauth`, Google OAuth |
+| External jobs | Requests, ScrapingDog endpoint |
+| NLP resource download | NLTK |
+| Data exploration | Jupyter Notebook, pandas and scikit-learn |
+| Styling | Streamlit custom HTML/CSS, static CSS |
+| Artifacts | Python pickle files |
+
+The complete pinned environment snapshot is in [requirements.txt](requirements.txt). It contains packages beyond those imported directly by the active app. No supported Python version or reproducible artifact-build manifest is currently declared.
+
+## 🗂️ Repository layout
+
+```text
+CareerCompass/
+├── .github/
+│   ├── ISSUE_TEMPLATE/             # Structured issue forms
+│   ├── DISCUSSION_TEMPLATE/        # Q&A and idea prompts
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/                  # CI and documentation checks
+├── docs/
+│   ├── assets/                     # Architecture and process diagrams
+│   ├── decisions/                  # Architecture decision records
+│   ├── templates/                  # Reusable project templates
+│   ├── architecture.md
+│   ├── model-card.md
+│   ├── data-governance.md
+│   ├── privacy.md
+│   ├── security-review.md
+│   ├── testing.md
+│   └── ...
+├── app.py                          # Streamlit application
+├── clf.pkl                         # Serialized classifier, trusted source only
+├── tfidf.pkl                       # Serialized TF-IDF transformer
+├── UpdatedResumeDataSet.csv        # Résumé examples, rights require review
+├── Resume Screening with Python.ipynb
+├── index.html                      # Static landing page
+├── style.css
+├── session_state.py                # Legacy helper, currently unused
+├── requirements.txt
+├── .env.example
+├── README.md
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── SUPPORT.md
+└── ROADMAP.md
+```
+
+See [project structure](docs/project-structure.md) for the role and maintenance status of each component.
+
+## 🚀 Quick start
+
+### Prerequisites
+
+- Git.
+- A Python interpreter compatible with the pinned packages in `requirements.txt`. The repository does not currently declare a supported version.
+- Network access for package installation and the NLTK download calls made at application startup.
+- Google OAuth credentials for the sign-in path. The current redirect URI is hard-coded to the published Streamlit address, so local OAuth needs a corresponding code and provider configuration change.
+
+### Install and launch
+
+**Windows PowerShell**
 
 ```powershell
 git clone https://github.com/Brajesh31/CareerCompass.git
@@ -91,9 +160,9 @@ python -m pip install -r requirements.txt
 streamlit run app.py
 ```
 
-macOS or Linux:
+**macOS / Linux**
 
-```sh
+```bash
 git clone https://github.com/Brajesh31/CareerCompass.git
 cd CareerCompass
 python3 -m venv .venv
@@ -103,71 +172,128 @@ python -m pip install -r requirements.txt
 streamlit run app.py
 ```
 
-For local OAuth configuration, copy `.env.example` to `.env` and fill in the
-Google OAuth values. Keep `.env` private and untracked. The currently hard-coded
-third-party API credential must be rotated and moved to secret configuration
-before the job lookup integration is used again. See [installation.md](docs/installation.md)
-and [deployment.md](docs/deployment.md) for more context. Stop Streamlit with
-`Ctrl+C` in the terminal.
+Open the local URL printed by Streamlit, usually `http://localhost:8501`. Stop the server with `Ctrl+C`.
 
-## Repository contents
+> [!WARNING]
+> Do not upload real, confidential, or identifiable résumés. The integration credential is hard-coded in the existing application source and must be revoked or rotated with the provider. Do not use the provider path until the replacement is moved to secure configuration and the app is updated to read it.
 
-| Path | Purpose |
-| --- | --- |
-| `app.py` | Streamlit login, upload, prediction, and external job lookup flow |
-| `clf.pkl`, `tfidf.pkl` | Serialized classifier and TF-IDF vectorizer loaded by the app |
-| `UpdatedResumeDataSet.csv` | Résumé text and category labels used in the notebook |
-| `Resume Screening with Python.ipynb` | Exploratory data work, training, and artifact creation |
-| `index.html`, `style.css` | Static sign-up/landing page; its form and popup scripts are incomplete |
-| `session_state.py` | Legacy helper not imported by the current `app.py` |
-| `requirements.txt` | Pinned Python packages; includes more packages than the app imports directly |
-| `docs/` | Installation, architecture, deployment, data, API, and contributor guides |
+Detailed setup: [Installation guide](docs/installation.md).
 
-The static page redirects toward the Streamlit app; it does not provide a
-separate working registration backend. The current Streamlit app has no
-application database or public REST API.
+## ⚙️ Configuration
 
-## Model and data limitations
+Copy `.env.example` to `.env` and configure Google OAuth values you control. The file is ignored by Git and must remain private.
 
-The notebook loads 962 labeled résumé examples across 25 categories, cleans
-text, fits a TF-IDF vectorizer, and compares several classifiers. It fits the
-vectorizer before splitting the data into training and test sets, which leaks
-information from the test text into feature construction. The source does not
-provide a documented data source/license, a reproducible evaluation report,
-calibration, fairness analysis, or independent validation. The bundled model
-should therefore be treated as a demonstration artifact only.
+| Setting | Current status | Notes |
+|---|---|---|
+| `GOOGLE_CLIENT_ID` | Read by app | OAuth client identifier |
+| `GOOGLE_CLIENT_SECRET` | Read by app | Keep private; use host secret manager |
+| ScrapingDog API key | Hard-coded in current app source | Treat as exposed, rotate, then refactor to secret configuration |
+| OAuth redirect URI | Hard-coded in `app.py` | Must match the OAuth provider callback |
 
-Read [architecture.md](docs/architecture.md) for the implementation flow,
-[api.md](docs/api.md) for the absence of a public application API, and
-[troubleshooting.md](docs/troubleshooting.md) if the app does not start.
+A placeholder variable in `.env.example` is not proof that application code reads it. See [configuration reference](docs/configuration.md).
 
-## Contributing, support, and license
+## 🧪 Data and model
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a change. For project
-help, see [SUPPORT.md](SUPPORT.md); for conduct expectations, see
-[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). The project source is offered under
-the MIT License in [LICENSE](LICENSE), subject to rights in third-party data,
-models, libraries, and assets being reviewed separately. See [CITATION.cff](CITATION.cff)
-for citation metadata and [CHANGELOG.md](CHANGELOG.md) for recorded changes.
+The notebook loads 962 labeled résumé examples across 25 categories. It applies text cleaning, label encoding, TF-IDF, and classifier experiments before saving serialized artifacts. The application separately maintains a hand-written label mapping.
 
-## Documentation map
+Important reproducibility and validity concerns:
 
-- [Architecture](docs/architecture.md): components, inference flow, and limitations.
+1. TF-IDF is fitted before the train/test split in the notebook, leaking information from test text into feature construction.
+2. The label encoder is not saved alongside the classifier. The app's manual ID-to-name mapping is inconsistent with the notebook ordering for IDs 10–13.
+3. The dataset's source, consent basis, provenance, and redistribution license are not documented.
+4. Notebook examples may contain personal information and require review before redistribution.
+5. The model has no independently reproducible evaluation report, calibration, or fairness assessment.
+6. The current cleaner removes broad substrings and non-ASCII characters, which can destroy meaningful résumé content.
+7. The serialized pickle files must only be loaded from a trusted origin and compatible Python/scikit-learn environment.
 
-- [Installation](docs/installation.md): Python environment, OAuth setup, and local run instructions.
+![Model inference data flow](docs/assets/model-data-flow.svg)
 
-- [Development](docs/development.md): safe change, data, and model practices.
+Read the [model card](docs/model-card.md), [data governance guide](docs/data-governance.md), and [model evaluation plan](docs/model-evaluation.md) before proposing model-related changes.
 
-- [Deployment](docs/deployment.md): pre-deployment blockers and hosting guidance.
+## 🔐 Security and privacy
 
-- [API](docs/api.md): current OAuth and external job-search integrations.
+- **Credential exposure:** a third-party job-search key is embedded in `app.py`. Assume it is compromised, revoke or rotate it, and review Git history. A follow-up commit does not erase previous history.
+- **Résumé sensitivity:** uploaded content is processed by the Streamlit server. Job lookup currently uses the predicted category rather than the complete résumé, but hosting logs and retention are not fully specified.
+- **Pickle risk:** Python pickle deserialization can execute code. Only use artifacts from trusted sources.
+- **Unsafe HTML:** job fields are inserted into HTML in the current interface. Treat external responses as untrusted and render them safely.
+- **OAuth limitations:** an OAuth token gate is not a complete authorization, account, or privacy system.
+- **Data rights:** the repository license does not grant rights to third-party résumé examples or model artifacts.
 
-- [Database and data handling](docs/database.md): what the app processes and what it does not persist.
+See [SECURITY.md](SECURITY.md), [privacy guide](docs/privacy.md), and [security review](docs/security-review.md).
 
-- [Troubleshooting](docs/troubleshooting.md): common startup, upload, model, and provider failures.
+## 🚧 Known limitations and release blockers
 
-- [FAQ](docs/faq.md): common questions about categories, privacy, and model limits.
+| Priority | Issue | Why it matters |
+|---|---|---|
+| Critical | Hard-coded provider credential in source/history | Exposure and unauthorized use risk |
+| Critical | Dataset and notebook data rights undocumented | Privacy and redistribution risk |
+| High | Manual class map mismatches encoder for IDs 10–13 | Incorrect category labels |
+| High | TF-IDF fitted before train/test split | Evaluation leakage |
+| High | PDF accepted but not parsed | Misleading upload behavior |
+| High | External response fields inserted into HTML | Potential markup injection |
+| High | No timeout on provider request | Hung or slow requests |
+| High | No model card or validated metrics | Claims cannot be substantiated |
+| Medium | Broad regex cleaning removes useful text | Distorted model input |
+| Medium | OAuth callback is hard-coded | Local setup friction |
+| Medium | No automated test suite before this enhancement | Regression risk |
+| Medium | Python version and artifact manifest absent | Reproduction uncertainty |
 
-For contribution and operations guidance, see [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), [SUPPORT.md](SUPPORT.md), and [ROADMAP.md](ROADMAP.md).
+The project is not ready for real résumé uploads or public production use. Track improvements in [ROADMAP.md](ROADMAP.md) and the [release-readiness checklist](docs/templates/release-readiness-checklist.md).
 
-Last updated: 2026-11-17 04:50 UTC
+## 🧫 Testing and quality
+
+Documentation and workflow checks can validate repository hygiene. They do not validate model correctness, employment suitability, privacy compliance, or provider behavior. The workflow should never report that scientific validity has been established.
+
+For local syntax validation:
+
+```bash
+python -m compileall -q app.py session_state.py
+```
+
+For the complete validation strategy, use [docs/testing.md](docs/testing.md). Use synthetic résumé text only and mock OAuth/provider network calls in tests.
+
+## 📚 Documentation
+
+| Guide | Purpose |
+|---|---|
+| [Documentation index](docs/README.md) | Start here |
+| [Architecture](docs/architecture.md) | Runtime and component design |
+| [Project structure](docs/project-structure.md) | Repository map |
+| [Installation](docs/installation.md) | Environment and local startup |
+| [Configuration](docs/configuration.md) | Environment and secrets |
+| [Development](docs/development.md) | Safe development workflow |
+| [Model card](docs/model-card.md) | Intended use, data and model risks |
+| [Model evaluation](docs/model-evaluation.md) | Leakage-free evaluation plan |
+| [Data governance](docs/data-governance.md) | Provenance, consent and retention |
+| [Privacy](docs/privacy.md) | Data-flow and privacy boundaries |
+| [Security review](docs/security-review.md) | Threats and mitigations |
+| [Testing](docs/testing.md) | Code, integration and model checks |
+| [Deployment](docs/deployment.md) | Hosting prerequisites |
+| [Operations runbook](docs/operations-runbook.md) | Incident response and shutdown |
+| [Accessibility](docs/accessibility.md) | UI accessibility review |
+| [Troubleshooting](docs/troubleshooting.md) | Common setup/runtime problems |
+| [FAQ](docs/faq.md) | Project questions |
+| [Templates](docs/templates/README.md) | Reusable engineering templates |
+| [Architecture decisions](docs/decisions/README.md) | Decision records |
+
+## 🤝 Contributing
+
+Contributions should improve clarity, reproducibility, privacy, security, accessibility, and technical reliability. Do not add real résumés, real credentials, personal information, or unsupported claims of model accuracy.
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+2. Use synthetic examples and mocked external services.
+3. State whether the change affects uploads, personal data, model behavior, or third-party requests.
+4. Add focused tests and update the affected documentation.
+5. Submit a pull request using the repository template.
+
+## 🗺️ Roadmap
+
+The roadmap prioritizes credential remediation, data rights, correct label mapping, leakage-free training, robust PDF handling, safe rendering, reproducible evaluation, and privacy controls before feature expansion. See [ROADMAP.md](ROADMAP.md).
+
+## 📄 License and attribution
+
+The repository contains an MIT license. That license does not automatically cover the résumé dataset, notebook examples, model artifacts, external images, or third-party resources. Their provenance and redistribution rights must be established separately. See [LICENSE](LICENSE) and [CITATION.cff](CITATION.cff).
+
+---
+
+<p align="center">Built as an educational machine-learning prototype. Treat predictions with caution, protect personal data, and verify every claim.</p>

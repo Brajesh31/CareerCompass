@@ -1,0 +1,13 @@
+title: "💬 Question and support"
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic examples. Never post résumés, personal information, access tokens, or API keys."
+  - type: textarea
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What have you tried?

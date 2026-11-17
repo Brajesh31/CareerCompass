@@ -1,0 +1,55 @@
+name: Repository quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Syntax and documentation checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile tracked Python entry points
+        run: python -m compileall -q app.py session_state.py
+      - name: Validate Markdown relative links
+        run: |
+          python - <<'PY'
+          import pathlib, re, sys
+          files = [pathlib.Path("README.md"), *pathlib.Path("docs").rglob("*.md")]
+          failures = []
+          pattern = re.compile(r'\[[^\]]+\]\(([^)]+)\)')
+          for file in files:
+              text = file.read_text(encoding="utf-8")
+              for target in pattern.findall(text):
+                  if target.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  target = target.split("#", 1)[0]
+                  if not target:
+                      continue
+                  resolved = (file.parent / target).resolve()
+                  if not resolved.exists():
+                      failures.append(f"{file}: {target}")
+          if failures:
+              print("\n".join(failures))
+              sys.exit(1)
+          print(f"Checked relative Markdown links in {len(files)} files.")
+          PY
+      - name: Validate repository templates
+        run: |
+          test -f .github/PULL_REQUEST_TEMPLATE.md
+          test -f docs/model-card.md
+          test -f docs/data-governance.md
+          test -f docs/assets/application-flow.svg
+          test -f docs/assets/model-data-flow.svg

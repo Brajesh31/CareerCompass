@@ -1,0 +1,26 @@
+name: "✨ Feature request"
+description: "Propose a project improvement"
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or user need
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact review
+      options:
+        - label: This changes résumé or personal-data processing
+        - label: This changes model/data behavior
+        - label: This adds an external provider
+        - label: This affects accessibility
