@@ -43,7 +43,7 @@ def clean_resume(resume_text):
     clean_text = re.sub('[%s]' % re.escape("""!"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"""), ' ', clean_text)
     clean_text = re.sub(r'[^\x00-\x7f]', r' ', clean_text)
     clean_text = re.sub('\\s+', ' ', clean_text)
-    return clean_text
+    return clean_text.strip()
 
 # Function to fetch LinkedIn jobs
 def fetch_linkedin_jobs(api_key, field, geoid, page):
